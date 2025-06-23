@@ -1,0 +1,70 @@
+[2024-05-17T10:08:01.852+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: create_transection_data.create_api_data scheduled__2024-01-03T00:00:00+00:00 [queued]>
+[2024-05-17T10:08:01.877+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: create_transection_data.create_api_data scheduled__2024-01-03T00:00:00+00:00 [queued]>
+[2024-05-17T10:08:01.882+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-17T10:08:02.083+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_api_data> on 2024-01-03 00:00:00+00:00
+[2024-05-17T10:08:02.113+0000] {standard_task_runner.py:60} INFO - Started process 2362 to run task
+[2024-05-17T10:08:02.147+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'create_transection_data', 'create_api_data', 'scheduled__2024-01-03T00:00:00+00:00', '--job-id', '317', '--raw', '--subdir', 'DAGS_FOLDER/transection_data.py', '--cfg-path', '/tmp/tmph75esfve']
+[2024-05-17T10:08:02.168+0000] {standard_task_runner.py:88} INFO - Job 317: Subtask create_api_data
+[2024-05-17T10:08:02.351+0000] {task_command.py:423} INFO - Running <TaskInstance: create_transection_data.create_api_data scheduled__2024-01-03T00:00:00+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-17T10:08:02.511+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='create_transection_data' AIRFLOW_CTX_TASK_ID='create_api_data' AIRFLOW_CTX_EXECUTION_DATE='2024-01-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-03T00:00:00+00:00'
+[2024-05-17T10:08:02.542+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T10:08:02.566+0000] {sql.py:450} INFO - Running statement: 
+            CREATE TABLE IF NOT EXISTS api_data AS
+            SELECT 
+                booking.id AS booking_id,
+                booking.booking_start_date,
+                booking.booking_start_time,
+                booking.booking_end_time,
+                booking.duration_in_minute,
+                booking.remarks,
+                booking.subject_code,
+                booking.section,
+                attendance.id AS attendance_id,
+                attendance.subject_name,
+                attendance.class_date,
+                attendance.class_start,
+                attendance.class_end,
+                attendance.num_enrolledStd,
+                attendance.num_present,
+                attendance.percent_present,
+                attendance.num_absent,
+                attendance.percent_absent,
+                attendance.num_leave,
+                attendance.percent_leave
+            FROM 
+                booking
+            LEFT JOIN 
+                attendance ON 
+                booking.subject_code = attendance.subject_code AND
+                booking.section = attendance.section AND
+                booking.booking_start_date = attendance.class_date AND
+                booking.booking_start_time >= attendance.class_start AND 
+                booking.booking_end_time <= attendance.class_end;
+  
+        , parameters: None
+[2024-05-17T10:08:02.584+0000] {transection_data.py:67} ERROR - Error creating api_data table: duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+DETAIL:  Key (typname, typnamespace)=(api_data, 2200) already exists.
+
+[2024-05-17T10:08:02.587+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/transection_data.py", line 64, in create_api_data
+    postgres_hook.run(create_table_query)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 398, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 455, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+DETAIL:  Key (typname, typnamespace)=(api_data, 2200) already exists.
+
+[2024-05-17T10:08:02.601+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=create_transection_data, task_id=create_api_data, execution_date=20240103T000000, start_date=20240517T100801, end_date=20240517T100802
+[2024-05-17T10:08:02.634+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 317 for task create_api_data (duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+DETAIL:  Key (typname, typnamespace)=(api_data, 2200) already exists.
+; 2362)
+[2024-05-17T10:08:02.684+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-05-17T10:08:03.167+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

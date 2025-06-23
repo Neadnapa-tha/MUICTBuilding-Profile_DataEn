@@ -1,0 +1,17 @@
+[2024-05-20T04:02:22.812+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: temp_humi_dag_csv.delete_data manual__2024-05-20T04:02:21.608337+00:00 [queued]>
+[2024-05-20T04:02:22.818+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: temp_humi_dag_csv.delete_data manual__2024-05-20T04:02:21.608337+00:00 [queued]>
+[2024-05-20T04:02:22.819+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-20T04:02:22.827+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): delete_data> on 2024-05-20 04:02:21.608337+00:00
+[2024-05-20T04:02:22.832+0000] {standard_task_runner.py:60} INFO - Started process 3147 to run task
+[2024-05-20T04:02:22.835+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'temp_humi_dag_csv', 'delete_data', 'manual__2024-05-20T04:02:21.608337+00:00', '--job-id', '742', '--raw', '--subdir', 'DAGS_FOLDER/ICTTemp_Humi_CSV.py', '--cfg-path', '/tmp/tmpc43szkx4']
+[2024-05-20T04:02:22.838+0000] {standard_task_runner.py:88} INFO - Job 742: Subtask delete_data
+[2024-05-20T04:02:22.873+0000] {task_command.py:423} INFO - Running <TaskInstance: temp_humi_dag_csv.delete_data manual__2024-05-20T04:02:21.608337+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-20T04:02:23.065+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Group4' AIRFLOW_CTX_DAG_ID='temp_humi_dag_csv' AIRFLOW_CTX_TASK_ID='delete_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-20T04:02:21.608337+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-20T04:02:21.608337+00:00'
+[2024-05-20T04:02:23.071+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T04:02:23.083+0000] {sql.py:450} INFO - Running statement: DELETE FROM test_temp_and_humi;, parameters: None
+[2024-05-20T04:02:23.088+0000] {sql.py:459} INFO - Rows affected: 4635
+[2024-05-20T04:02:23.092+0000] {logging_mixin.py:188} INFO - Delete table successfully from PostgreSQL.
+[2024-05-20T04:02:23.093+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-05-20T04:02:23.100+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=temp_humi_dag_csv, task_id=delete_data, execution_date=20240520T040221, start_date=20240520T040222, end_date=20240520T040223
+[2024-05-20T04:02:23.133+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-20T04:02:23.151+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

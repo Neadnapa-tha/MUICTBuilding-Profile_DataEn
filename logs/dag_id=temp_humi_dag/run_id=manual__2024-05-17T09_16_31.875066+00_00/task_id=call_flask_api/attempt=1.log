@@ -1,0 +1,67 @@
+[2024-05-17T09:16:34.922+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: temp_humi_dag.call_flask_api manual__2024-05-17T09:16:31.875066+00:00 [queued]>
+[2024-05-17T09:16:34.927+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: temp_humi_dag.call_flask_api manual__2024-05-17T09:16:31.875066+00:00 [queued]>
+[2024-05-17T09:16:34.928+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-17T09:16:34.935+0000] {taskinstance.py:2191} INFO - Executing <Task(SimpleHttpOperator): call_flask_api> on 2024-05-17 09:16:31.875066+00:00
+[2024-05-17T09:16:34.939+0000] {standard_task_runner.py:60} INFO - Started process 16975 to run task
+[2024-05-17T09:16:34.942+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'temp_humi_dag', 'call_flask_api', 'manual__2024-05-17T09:16:31.875066+00:00', '--job-id', '217', '--raw', '--subdir', 'DAGS_FOLDER/ICTTemp_Humi_DAG.py', '--cfg-path', '/tmp/tmp05cnnl2d']
+[2024-05-17T09:16:34.944+0000] {standard_task_runner.py:88} INFO - Job 217: Subtask call_flask_api
+[2024-05-17T09:16:34.972+0000] {task_command.py:423} INFO - Running <TaskInstance: temp_humi_dag.call_flask_api manual__2024-05-17T09:16:31.875066+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-17T09:16:35.017+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Group4' AIRFLOW_CTX_DAG_ID='temp_humi_dag' AIRFLOW_CTX_TASK_ID='call_flask_api' AIRFLOW_CTX_EXECUTION_DATE='2024-05-17T09:16:31.875066+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-17T09:16:31.875066+00:00'
+[2024-05-17T09:16:35.019+0000] {http.py:169} INFO - Calling HTTP method
+[2024-05-17T09:16:35.025+0000] {base.py:83} INFO - Using connection ID 'http_flask_connection' for task execution.
+[2024-05-17T09:16:35.033+0000] {base.py:83} INFO - Using connection ID 'http_flask_connection' for task execution.
+[2024-05-17T09:16:35.600+0000] {http.py:178} ERROR - HTTP error: Not Found
+[2024-05-17T09:16:35.609+0000] {http.py:179} ERROR - <!DOCTYPE html>
+<html class="h-full" lang="en-US" dir="ltr">
+  <head>
+    <link rel="preload" href="https://cdn.ngrok.com/static/fonts/euclid-square/EuclidSquare-Regular-WebS.woff" as="font" type="font/woff" crossorigin="anonymous" />
+    <link rel="preload" href="https://cdn.ngrok.com/static/fonts/euclid-square/EuclidSquare-RegularItalic-WebS.woff" as="font" type="font/woff" crossorigin="anonymous" />
+    <link rel="preload" href="https://cdn.ngrok.com/static/fonts/euclid-square/EuclidSquare-Medium-WebS.woff" as="font" type="font/woff" crossorigin="anonymous" />
+    <link rel="preload" href="https://cdn.ngrok.com/static/fonts/euclid-square/EuclidSquare-Semibold-WebS.woff" as="font" type="font/woff" crossorigin="anonymous" />
+    <link rel="preload" href="https://cdn.ngrok.com/static/fonts/euclid-square/EuclidSquare-MediumItalic-WebS.woff" as="font" type="font/woff" crossorigin="anonymous" />
+    <link rel="preload" href="https://cdn.ngrok.com/static/fonts/ibm-plex-mono/IBMPlexMono-Text.woff" as="font" type="font/woff" crossorigin="anonymous" />
+    <link rel="preload" href="https://cdn.ngrok.com/static/fonts/ibm-plex-mono/IBMPlexMono-TextItalic.woff" as="font" type="font/woff" crossorigin="anonymous" />
+    <link rel="preload" href="https://cdn.ngrok.com/static/fonts/ibm-plex-mono/IBMPlexMono-SemiBold.woff" as="font" type="font/woff" crossorigin="anonymous" />
+    <link rel="preload" href="https://cdn.ngrok.com/static/fonts/ibm-plex-mono/IBMPlexMono-SemiBoldItalic.woff" as="font" type="font/woff" crossorigin="anonymous" />
+    <meta charset="utf-8">
+    <meta name="author" content="ngrok">
+    <meta name="description" content="ngrok is the fastest way to put anything on the internet with a single command.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link id="style" rel="stylesheet" href="https://cdn.ngrok.com/static/css/error.css">
+    <noscript>Tunnel 16d9-2001-44c8-41c4-21af-f8bf-43ad-a3a5-3a83.ngrok-free.app not found (ERR_NGROK_3200)</noscript>
+    <script id="script" src="https://cdn.ngrok.com/static/js/error.js" type="text/javascript"></script>
+  </head>
+  <body class="h-full" id="ngrok">
+    <div id="root" data-payload="eyJjZG5CYXNlIjoiaHR0cHM6Ly9jZG4ubmdyb2suY29tLyIsImNvZGUiOiIzMjAwIiwibWVzc2FnZSI6IlR1bm5lbCAxNmQ5LTIwMDEtNDRjOC00MWM0LTIxYWYtZjhiZi00M2FkLWEzYTUtM2E4My5uZ3Jvay1mcmVlLmFwcCBub3QgZm91bmQiLCJ0aXRsZSI6Ik5vdCBGb3VuZCJ9"></div>
+  </body>
+</html>
+
+[2024-05-17T09:16:35.634+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/http/hooks/http.py", line 176, in check_response
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://16d9-2001-44c8-41c4-21af-f8bf-43ad-a3a5-3a83.ngrok-free.app/ICTTemp_Humi
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/http/operators/http.py", line 166, in execute
+    return self.execute_sync(context=context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/http/operators/http.py", line 170, in execute_sync
+    response = self.hook.run(self.endpoint, self.data, self.headers, self.extra_options)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/http/hooks/http.py", line 166, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/http/hooks/http.py", line 217, in run_and_check
+    self.check_response(response)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/http/hooks/http.py", line 180, in check_response
+    raise AirflowException(str(response.status_code) + ":" + response.reason)
+airflow.exceptions.AirflowException: 404:Not Found
+[2024-05-17T09:16:35.641+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=temp_humi_dag, task_id=call_flask_api, execution_date=20240517T091631, start_date=20240517T091634, end_date=20240517T091635
+[2024-05-17T09:16:35.653+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 217 for task call_flask_api (404:Not Found; 16975)
+[2024-05-17T09:16:35.711+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-05-17T09:16:35.733+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,298 @@
+[2024-05-20T12:40:31.519+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_data_attendance_test.save_classinfo_data_to_postgresql manual__2024-05-20T12:40:22.154591+00:00 [queued]>
+[2024-05-20T12:40:31.527+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_data_attendance_test.save_classinfo_data_to_postgresql manual__2024-05-20T12:40:22.154591+00:00 [queued]>
+[2024-05-20T12:40:31.528+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-20T12:40:31.536+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): save_classinfo_data_to_postgresql> on 2024-05-20 12:40:22.154591+00:00
+[2024-05-20T12:40:31.540+0000] {standard_task_runner.py:60} INFO - Started process 2512 to run task
+[2024-05-20T12:40:31.542+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'api_data_attendance_test', 'save_classinfo_data_to_postgresql', 'manual__2024-05-20T12:40:22.154591+00:00', '--job-id', '815', '--raw', '--subdir', 'DAGS_FOLDER/api_data_attendance.py', '--cfg-path', '/tmp/tmpb1pr74hy']
+[2024-05-20T12:40:31.545+0000] {standard_task_runner.py:88} INFO - Job 815: Subtask save_classinfo_data_to_postgresql
+[2024-05-20T12:40:31.583+0000] {task_command.py:423} INFO - Running <TaskInstance: api_data_attendance_test.save_classinfo_data_to_postgresql manual__2024-05-20T12:40:22.154591+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-20T12:40:31.629+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='api_data_attendance_test' AIRFLOW_CTX_TASK_ID='save_classinfo_data_to_postgresql' AIRFLOW_CTX_EXECUTION_DATE='2024-05-20T12:40:22.154591+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-20T12:40:22.154591+00:00'
+[2024-05-20T12:40:31.647+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.656+0000] {sql.py:450} INFO - Running statement: 
+                        SELECT COUNT(*) 
+                        FROM class_info 
+                        WHERE remarks = %s;
+                    , parameters: ('662|ITCS461|3',)
+[2024-05-20T12:40:31.660+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.667+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.678+0000] {sql.py:450} INFO - Running statement: 
+                            INSERT INTO class_info (
+                                remarks,
+                                subject_code,
+                                subject_name,
+                                section
+                            )
+                            VALUES (%s, %s, %s, %s);
+                        , parameters: ('662|ITCS461|3', 'ITCS461', 'Computer and Communication Security', '3')
+[2024-05-20T12:40:31.682+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.685+0000] {api_data_attendance.py:225} INFO - Successfully inserted data into class_info table for remarks: 662|ITCS461|3
+[2024-05-20T12:40:31.691+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.700+0000] {sql.py:450} INFO - Running statement: 
+                        SELECT COUNT(*) 
+                        FROM class_info 
+                        WHERE remarks = %s;
+                    , parameters: ('662|ITCS461|1',)
+[2024-05-20T12:40:31.703+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.712+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.719+0000] {sql.py:450} INFO - Running statement: 
+                            INSERT INTO class_info (
+                                remarks,
+                                subject_code,
+                                subject_name,
+                                section
+                            )
+                            VALUES (%s, %s, %s, %s);
+                        , parameters: ('662|ITCS461|1', 'ITCS461', 'Computer and Communication Security', '1')
+[2024-05-20T12:40:31.723+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.727+0000] {api_data_attendance.py:225} INFO - Successfully inserted data into class_info table for remarks: 662|ITCS461|1
+[2024-05-20T12:40:31.732+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.739+0000] {sql.py:450} INFO - Running statement: 
+                        SELECT COUNT(*) 
+                        FROM class_info 
+                        WHERE remarks = %s;
+                    , parameters: ('662|ITCS122|2',)
+[2024-05-20T12:40:31.742+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.748+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.757+0000] {sql.py:450} INFO - Running statement: 
+                            INSERT INTO class_info (
+                                remarks,
+                                subject_code,
+                                subject_name,
+                                section
+                            )
+                            VALUES (%s, %s, %s, %s);
+                        , parameters: ('662|ITCS122|2', 'ITCS122', 'Numerical Methods', '2')
+[2024-05-20T12:40:31.759+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.761+0000] {api_data_attendance.py:225} INFO - Successfully inserted data into class_info table for remarks: 662|ITCS122|2
+[2024-05-20T12:40:31.766+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.772+0000] {sql.py:450} INFO - Running statement: 
+                        SELECT COUNT(*) 
+                        FROM class_info 
+                        WHERE remarks = %s;
+                    , parameters: ('662|ITCS335|2',)
+[2024-05-20T12:40:31.776+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.783+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.790+0000] {sql.py:450} INFO - Running statement: 
+                            INSERT INTO class_info (
+                                remarks,
+                                subject_code,
+                                subject_name,
+                                section
+                            )
+                            VALUES (%s, %s, %s, %s);
+                        , parameters: ('662|ITCS335|2', 'ITCS335', 'Introduction to E-business Systems', '2')
+[2024-05-20T12:40:31.794+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.796+0000] {api_data_attendance.py:225} INFO - Successfully inserted data into class_info table for remarks: 662|ITCS335|2
+[2024-05-20T12:40:31.800+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.808+0000] {sql.py:450} INFO - Running statement: 
+                        SELECT COUNT(*) 
+                        FROM class_info 
+                        WHERE remarks = %s;
+                    , parameters: ('662|ITDS344|1',)
+[2024-05-20T12:40:31.812+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.817+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.826+0000] {sql.py:450} INFO - Running statement: 
+                            INSERT INTO class_info (
+                                remarks,
+                                subject_code,
+                                subject_name,
+                                section
+                            )
+                            VALUES (%s, %s, %s, %s);
+                        , parameters: ('662|ITDS344|1', 'ITDS344', 'Data Engineering and Infrastructure', '1')
+[2024-05-20T12:40:31.829+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.831+0000] {api_data_attendance.py:225} INFO - Successfully inserted data into class_info table for remarks: 662|ITDS344|1
+[2024-05-20T12:40:31.836+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.843+0000] {sql.py:450} INFO - Running statement: 
+                        SELECT COUNT(*) 
+                        FROM class_info 
+                        WHERE remarks = %s;
+                    , parameters: ('662|ITCS123|3',)
+[2024-05-20T12:40:31.847+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.853+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.861+0000] {sql.py:450} INFO - Running statement: 
+                            INSERT INTO class_info (
+                                remarks,
+                                subject_code,
+                                subject_name,
+                                section
+                            )
+                            VALUES (%s, %s, %s, %s);
+                        , parameters: ('662|ITCS123|3', 'ITCS123', 'Object Oriented Programming', '3')
+[2024-05-20T12:40:31.864+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.867+0000] {api_data_attendance.py:225} INFO - Successfully inserted data into class_info table for remarks: 662|ITCS123|3
+[2024-05-20T12:40:31.871+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.879+0000] {sql.py:450} INFO - Running statement: 
+                        SELECT COUNT(*) 
+                        FROM class_info 
+                        WHERE remarks = %s;
+                    , parameters: ('662|ITDS332|1',)
+[2024-05-20T12:40:31.882+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.888+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.895+0000] {sql.py:450} INFO - Running statement: 
+                            INSERT INTO class_info (
+                                remarks,
+                                subject_code,
+                                subject_name,
+                                section
+                            )
+                            VALUES (%s, %s, %s, %s);
+                        , parameters: ('662|ITDS332|1', 'ITDS332', 'Internet of Things Communication Technology', '1')
+[2024-05-20T12:40:31.899+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.901+0000] {api_data_attendance.py:225} INFO - Successfully inserted data into class_info table for remarks: 662|ITDS332|1
+[2024-05-20T12:40:31.905+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.913+0000] {sql.py:450} INFO - Running statement: 
+                        SELECT COUNT(*) 
+                        FROM class_info 
+                        WHERE remarks = %s;
+                    , parameters: ('662|ITCS424|2',)
+[2024-05-20T12:40:31.916+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.922+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.931+0000] {sql.py:450} INFO - Running statement: 
+                            INSERT INTO class_info (
+                                remarks,
+                                subject_code,
+                                subject_name,
+                                section
+                            )
+                            VALUES (%s, %s, %s, %s);
+                        , parameters: ('662|ITCS424|2', 'ITCS424', 'Wireless and Mobile Computing', '2')
+[2024-05-20T12:40:31.934+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.936+0000] {api_data_attendance.py:225} INFO - Successfully inserted data into class_info table for remarks: 662|ITCS424|2
+[2024-05-20T12:40:31.942+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.952+0000] {sql.py:450} INFO - Running statement: 
+                        SELECT COUNT(*) 
+                        FROM class_info 
+                        WHERE remarks = %s;
+                    , parameters: ('662|ITLG101|3',)
+[2024-05-20T12:40:31.957+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.968+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:31.980+0000] {sql.py:450} INFO - Running statement: 
+                            INSERT INTO class_info (
+                                remarks,
+                                subject_code,
+                                subject_name,
+                                section
+                            )
+                            VALUES (%s, %s, %s, %s);
+                        , parameters: ('662|ITLG101|3', 'ITLG101', 'Technical English I', '3')
+[2024-05-20T12:40:31.984+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:31.987+0000] {api_data_attendance.py:225} INFO - Successfully inserted data into class_info table for remarks: 662|ITLG101|3
+[2024-05-20T12:40:31.993+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:32.000+0000] {sql.py:450} INFO - Running statement: 
+                        SELECT COUNT(*) 
+                        FROM class_info 
+                        WHERE remarks = %s;
+                    , parameters: ('662|ITCS392|1',)
+[2024-05-20T12:40:32.003+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:32.010+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:32.017+0000] {sql.py:450} INFO - Running statement: 
+                            INSERT INTO class_info (
+                                remarks,
+                                subject_code,
+                                subject_name,
+                                section
+                            )
+                            VALUES (%s, %s, %s, %s);
+                        , parameters: ('662|ITCS392|1', 'ITCS392', 'Multimedia Systems Lab', '1')
+[2024-05-20T12:40:32.021+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:32.023+0000] {api_data_attendance.py:225} INFO - Successfully inserted data into class_info table for remarks: 662|ITCS392|1
+[2024-05-20T12:40:32.027+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:32.034+0000] {sql.py:450} INFO - Running statement: 
+                        SELECT COUNT(*) 
+                        FROM class_info 
+                        WHERE remarks = %s;
+                    , parameters: ('662|ITCT111|1',)
+[2024-05-20T12:40:32.038+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:32.044+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:32.051+0000] {sql.py:450} INFO - Running statement: 
+                            INSERT INTO class_info (
+                                remarks,
+                                subject_code,
+                                subject_name,
+                                section
+                            )
+                            VALUES (%s, %s, %s, %s);
+                        , parameters: ('662|ITCT111|1', 'ITCT111', 'Programming for CT', '1')
+[2024-05-20T12:40:32.054+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:32.057+0000] {api_data_attendance.py:225} INFO - Successfully inserted data into class_info table for remarks: 662|ITCT111|1
+[2024-05-20T12:40:32.062+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:32.070+0000] {sql.py:450} INFO - Running statement: 
+                        SELECT COUNT(*) 
+                        FROM class_info 
+                        WHERE remarks = %s;
+                    , parameters: ('662|ITCS122|4',)
+[2024-05-20T12:40:32.075+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:32.081+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:32.089+0000] {sql.py:450} INFO - Running statement: 
+                            INSERT INTO class_info (
+                                remarks,
+                                subject_code,
+                                subject_name,
+                                section
+                            )
+                            VALUES (%s, %s, %s, %s);
+                        , parameters: ('662|ITCS122|4', 'ITCS122', 'Numerical Methods', '4')
+[2024-05-20T12:40:32.092+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:32.096+0000] {api_data_attendance.py:225} INFO - Successfully inserted data into class_info table for remarks: 662|ITCS122|4
+[2024-05-20T12:40:32.100+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:32.107+0000] {sql.py:450} INFO - Running statement: 
+                        SELECT COUNT(*) 
+                        FROM class_info 
+                        WHERE remarks = %s;
+                    , parameters: ('662|ITDS125|2',)
+[2024-05-20T12:40:32.110+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:32.116+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:32.124+0000] {sql.py:450} INFO - Running statement: 
+                            INSERT INTO class_info (
+                                remarks,
+                                subject_code,
+                                subject_name,
+                                section
+                            )
+                            VALUES (%s, %s, %s, %s);
+                        , parameters: ('662|ITDS125|2', 'ITDS125', 'Applied Statistics for Computing', '2')
+[2024-05-20T12:40:32.128+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:32.130+0000] {api_data_attendance.py:225} INFO - Successfully inserted data into class_info table for remarks: 662|ITDS125|2
+[2024-05-20T12:40:32.135+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:32.143+0000] {sql.py:450} INFO - Running statement: 
+                        SELECT COUNT(*) 
+                        FROM class_info 
+                        WHERE remarks = %s;
+                    , parameters: ('662|ITDS283|1',)
+[2024-05-20T12:40:32.147+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:32.153+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:32.160+0000] {sql.py:450} INFO - Running statement: 
+                            INSERT INTO class_info (
+                                remarks,
+                                subject_code,
+                                subject_name,
+                                section
+                            )
+                            VALUES (%s, %s, %s, %s);
+                        , parameters: ('662|ITDS283|1', 'ITDS283', 'Mobile Application Development', '1')
+[2024-05-20T12:40:32.163+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:32.166+0000] {api_data_attendance.py:225} INFO - Successfully inserted data into class_info table for remarks: 662|ITDS283|1
+[2024-05-20T12:40:32.170+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:32.177+0000] {sql.py:450} INFO - Running statement: 
+                        SELECT COUNT(*) 
+                        FROM class_info 
+                        WHERE remarks = %s;
+                    , parameters: ('662|ITDS283|2',)
+[2024-05-20T12:40:32.181+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:32.187+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T12:40:32.195+0000] {sql.py:450} INFO - Running statement: 
+                            INSERT INTO class_info (
+                                remarks,
+                                subject_code,
+                                subject_name,
+                                section
+                            )
+                            VALUES (%s, %s, %s, %s);
+                        , parameters: ('662|ITDS283|2', 'ITDS283', 'Mobile Application Development', '2')
+[2024-05-20T12:40:32.198+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-20T12:40:32.200+0000] {api_data_attendance.py:225} INFO - Successfully inserted data into class_info table for remarks: 662|ITDS283|2
+[2024-05-20T12:40:32.201+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-05-20T12:40:32.207+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=api_data_attendance_test, task_id=save_classinfo_data_to_postgresql, execution_date=20240520T124022, start_date=20240520T124031, end_date=20240520T124032
+[2024-05-20T12:40:32.238+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-20T12:40:32.248+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

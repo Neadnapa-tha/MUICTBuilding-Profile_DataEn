@@ -1,0 +1,13 @@
+[2024-05-18T07:14:13.839+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: create_transection_data.get_jwt_token manual__2024-05-18T07:14:13.077750+00:00 [queued]>
+[2024-05-18T07:14:13.844+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: create_transection_data.get_jwt_token manual__2024-05-18T07:14:13.077750+00:00 [queued]>
+[2024-05-18T07:14:13.845+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-18T07:14:13.853+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): get_jwt_token> on 2024-05-18 07:14:13.077750+00:00
+[2024-05-18T07:14:13.857+0000] {standard_task_runner.py:60} INFO - Started process 2817 to run task
+[2024-05-18T07:14:13.860+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'create_transection_data', 'get_jwt_token', 'manual__2024-05-18T07:14:13.077750+00:00', '--job-id', '437', '--raw', '--subdir', 'DAGS_FOLDER/transection_data.py', '--cfg-path', '/tmp/tmp8pjffwfl']
+[2024-05-18T07:14:13.862+0000] {standard_task_runner.py:88} INFO - Job 437: Subtask get_jwt_token
+[2024-05-18T07:14:13.894+0000] {task_command.py:423} INFO - Running <TaskInstance: create_transection_data.get_jwt_token manual__2024-05-18T07:14:13.077750+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-18T07:14:13.940+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='create_transection_data' AIRFLOW_CTX_TASK_ID='get_jwt_token' AIRFLOW_CTX_EXECUTION_DATE='2024-05-18T07:14:13.077750+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-18T07:14:13.077750+00:00'
+[2024-05-18T07:14:14.120+0000] {python.py:201} INFO - Done. Returned value was: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJyb2xlIjoiVXNlciIsInVuaXF1ZV9uYW1lIjoiSU9TU0FQSSIsIlBlcm1pc3Npb24iOlsiQm9va2luZy5WaWV3IiwiQ2xhc3NJbmZvLlZpZXciXSwibmJmIjoxNzE2MDE2NDQyLCJleHAiOjE3MTYwMjAwNDIsImlhdCI6MTcxNjAxNjQ0MiwiaXNzIjoiRElQIEFQSSIsImF1ZCI6IklDVCxNYWhpZG9sIFVuaXZlcnNpdHkifQ.mujrVtGd5KMvQrwJaEMIMEI9V4LWEuOg8umkxAmnz6k
+[2024-05-18T07:14:14.134+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=create_transection_data, task_id=get_jwt_token, execution_date=20240518T071413, start_date=20240518T071413, end_date=20240518T071414
+[2024-05-18T07:14:14.154+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-18T07:14:14.172+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

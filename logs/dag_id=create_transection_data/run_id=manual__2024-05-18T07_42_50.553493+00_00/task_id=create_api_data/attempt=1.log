@@ -1,0 +1,56 @@
+[2024-05-18T07:42:53.284+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: create_transection_data.create_api_data manual__2024-05-18T07:42:50.553493+00:00 [queued]>
+[2024-05-18T07:42:53.290+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: create_transection_data.create_api_data manual__2024-05-18T07:42:50.553493+00:00 [queued]>
+[2024-05-18T07:42:53.291+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-18T07:42:53.298+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_api_data> on 2024-05-18 07:42:50.553493+00:00
+[2024-05-18T07:42:53.301+0000] {standard_task_runner.py:60} INFO - Started process 4791 to run task
+[2024-05-18T07:42:53.304+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'create_transection_data', 'create_api_data', 'manual__2024-05-18T07:42:50.553493+00:00', '--job-id', '463', '--raw', '--subdir', 'DAGS_FOLDER/transection_data.py', '--cfg-path', '/tmp/tmp_84xo6_9']
+[2024-05-18T07:42:53.306+0000] {standard_task_runner.py:88} INFO - Job 463: Subtask create_api_data
+[2024-05-18T07:42:53.333+0000] {task_command.py:423} INFO - Running <TaskInstance: create_transection_data.create_api_data manual__2024-05-18T07:42:50.553493+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-18T07:42:53.376+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='create_transection_data' AIRFLOW_CTX_TASK_ID='create_api_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-18T07:42:50.553493+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-18T07:42:50.553493+00:00'
+[2024-05-18T07:42:53.382+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-18T07:42:53.390+0000] {sql.py:450} INFO - Running statement: 
+            CREATE TABLE IF NOT EXISTS api_data AS
+            SELECT 
+                booking.booking_id,
+                booking.activity_id,
+                booking_request_date,
+                booking.booking_start_date,
+                booking.booking_end_date,
+                booking.booking_start_time,
+                booking.booking_end_time,
+                booking.duration_in_minute,
+                booking.remarks,
+                booking.subject_code,
+                booking.requester_name,
+                booking.room ,
+                booking.floor,
+                participants,
+                booking.section,
+                attendance.id AS attendance_id,
+                attendance.subject_name,
+                attendance.class_date,
+                attendance.class_start,
+                attendance.class_end,
+                attendance.num_enrolledStd,
+                attendance.num_present,
+                attendance.percent_present,
+                attendance.num_absent,
+                attendance.percent_absent,
+                attendance.num_leave,
+                attendance.percent_leave
+            FROM 
+                booking
+            LEFT JOIN 
+                attendance ON 
+                booking.subject_code = attendance.subject_code AND
+                booking.section = attendance.section AND
+                booking.booking_start_date = attendance.class_date AND
+                booking.booking_start_time >= attendance.class_start AND 
+                booking.booking_end_time <= attendance.class_end;
+        , parameters: None
+[2024-05-18T07:42:53.399+0000] {sql.py:459} INFO - Rows affected: 176
+[2024-05-18T07:42:53.402+0000] {transection_data.py:288} INFO - Successfully created api_data table.
+[2024-05-18T07:42:53.403+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-05-18T07:42:53.410+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=create_transection_data, task_id=create_api_data, execution_date=20240518T074250, start_date=20240518T074253, end_date=20240518T074253
+[2024-05-18T07:42:53.436+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-18T07:42:53.451+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

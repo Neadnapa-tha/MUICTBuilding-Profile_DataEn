@@ -1,0 +1,16 @@
+[2024-05-20T15:40:46.836+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: create_transection_data.delete_api_data manual__2024-05-20T15:40:43.633273+00:00 [queued]>
+[2024-05-20T15:40:46.849+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: create_transection_data.delete_api_data manual__2024-05-20T15:40:43.633273+00:00 [queued]>
+[2024-05-20T15:40:46.851+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-20T15:40:46.867+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): delete_api_data> on 2024-05-20 15:40:43.633273+00:00
+[2024-05-20T15:40:46.879+0000] {standard_task_runner.py:60} INFO - Started process 15927 to run task
+[2024-05-20T15:40:46.886+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'create_transection_data', 'delete_api_data', 'manual__2024-05-20T15:40:43.633273+00:00', '--job-id', '930', '--raw', '--subdir', 'DAGS_FOLDER/transection_data.py', '--cfg-path', '/tmp/tmppm2wyqit']
+[2024-05-20T15:40:46.891+0000] {standard_task_runner.py:88} INFO - Job 930: Subtask delete_api_data
+[2024-05-20T15:40:46.968+0000] {task_command.py:423} INFO - Running <TaskInstance: create_transection_data.delete_api_data manual__2024-05-20T15:40:43.633273+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-20T15:40:47.078+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='create_transection_data' AIRFLOW_CTX_TASK_ID='delete_api_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-20T15:40:43.633273+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-20T15:40:43.633273+00:00'
+[2024-05-20T15:40:47.095+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T15:40:47.120+0000] {sql.py:450} INFO - Running statement: DROP TABLE IF EXISTS api_data;, parameters: None
+[2024-05-20T15:40:47.134+0000] {transection_data.py:164} INFO - Successfully deleted data from api_data table.
+[2024-05-20T15:40:47.138+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-05-20T15:40:47.159+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=create_transection_data, task_id=delete_api_data, execution_date=20240520T154043, start_date=20240520T154046, end_date=20240520T154047
+[2024-05-20T15:40:47.221+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-20T15:40:47.253+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,13 @@
+[2024-05-17T04:37:17.470+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_data_booking4.get_jwt_token scheduled__2024-05-07T00:00:00+00:00 [queued]>
+[2024-05-17T04:37:17.490+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_data_booking4.get_jwt_token scheduled__2024-05-07T00:00:00+00:00 [queued]>
+[2024-05-17T04:37:17.494+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-17T04:37:17.512+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): get_jwt_token> on 2024-05-07 00:00:00+00:00
+[2024-05-17T04:37:17.532+0000] {standard_task_runner.py:60} INFO - Started process 1817 to run task
+[2024-05-17T04:37:17.563+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'api_data_booking4', 'get_jwt_token', 'scheduled__2024-05-07T00:00:00+00:00', '--job-id', '138', '--raw', '--subdir', 'DAGS_FOLDER/api_data_booking.py', '--cfg-path', '/tmp/tmpmheipg7t']
+[2024-05-17T04:37:17.569+0000] {standard_task_runner.py:88} INFO - Job 138: Subtask get_jwt_token
+[2024-05-17T04:37:17.631+0000] {task_command.py:423} INFO - Running <TaskInstance: api_data_booking4.get_jwt_token scheduled__2024-05-07T00:00:00+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-17T04:37:17.751+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='api_data_booking4' AIRFLOW_CTX_TASK_ID='get_jwt_token' AIRFLOW_CTX_EXECUTION_DATE='2024-05-07T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-07T00:00:00+00:00'
+[2024-05-17T04:37:18.023+0000] {python.py:201} INFO - Done. Returned value was: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJyb2xlIjoiVXNlciIsInVuaXF1ZV9uYW1lIjoiSU9TU0FQSSIsIlBlcm1pc3Npb24iOlsiQm9va2luZy5WaWV3IiwiQ2xhc3NJbmZvLlZpZXciXSwibmJmIjoxNzE1OTIwNjI2LCJleHAiOjE3MTU5MjQyMjYsImlhdCI6MTcxNTkyMDYyNiwiaXNzIjoiRElQIEFQSSIsImF1ZCI6IklDVCxNYWhpZG9sIFVuaXZlcnNpdHkifQ.bTfUI0ykMhaRvzOFCNspLlrXAE4Bc10aA-W1LebFxpM
+[2024-05-17T04:37:18.061+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=api_data_booking4, task_id=get_jwt_token, execution_date=20240507T000000, start_date=20240517T043717, end_date=20240517T043718
+[2024-05-17T04:37:18.105+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-17T04:37:18.166+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

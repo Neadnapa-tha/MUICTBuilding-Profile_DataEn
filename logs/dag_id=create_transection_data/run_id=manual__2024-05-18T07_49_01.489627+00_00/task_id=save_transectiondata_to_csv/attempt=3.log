@@ -1,0 +1,33 @@
+[2024-05-18T08:09:08.472+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: create_transection_data.save_transectiondata_to_csv manual__2024-05-18T07:49:01.489627+00:00 [queued]>
+[2024-05-18T08:09:08.478+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: create_transection_data.save_transectiondata_to_csv manual__2024-05-18T07:49:01.489627+00:00 [queued]>
+[2024-05-18T08:09:08.479+0000] {taskinstance.py:2170} INFO - Starting attempt 3 of 4
+[2024-05-18T08:09:08.486+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): save_transectiondata_to_csv> on 2024-05-18 07:49:01.489627+00:00
+[2024-05-18T08:09:08.490+0000] {standard_task_runner.py:60} INFO - Started process 6618 to run task
+[2024-05-18T08:09:08.493+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'create_transection_data', 'save_transectiondata_to_csv', 'manual__2024-05-18T07:49:01.489627+00:00', '--job-id', '538', '--raw', '--subdir', 'DAGS_FOLDER/transection_data.py', '--cfg-path', '/tmp/tmprbr5fgyd']
+[2024-05-18T08:09:08.495+0000] {standard_task_runner.py:88} INFO - Job 538: Subtask save_transectiondata_to_csv
+[2024-05-18T08:09:08.522+0000] {task_command.py:423} INFO - Running <TaskInstance: create_transection_data.save_transectiondata_to_csv manual__2024-05-18T07:49:01.489627+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-18T08:09:08.568+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='create_transection_data' AIRFLOW_CTX_TASK_ID='save_transectiondata_to_csv' AIRFLOW_CTX_EXECUTION_DATE='2024-05-18T07:49:01.489627+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-18T07:49:01.489627+00:00'
+[2024-05-18T08:09:08.575+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-18T08:09:08.597+0000] {sql.py:450} INFO - Running statement: SELECT * FROM transsection;, parameters: None
+[2024-05-18T08:09:08.653+0000] {sql.py:459} INFO - Rows affected: 5617
+[2024-05-18T08:09:08.692+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-18T08:09:08.702+0000] {sql.py:450} INFO - Running statement: SELECT * FROM transsection;, parameters: None
+[2024-05-18T08:09:08.758+0000] {sql.py:459} INFO - Rows affected: 5617
+[2024-05-18T08:09:08.762+0000] {transection_data.py:376} ERROR - Error saving transaction data to CSV: 'datetime.date' object is not subscriptable
+[2024-05-18T08:09:08.764+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/transection_data.py", line 366, in save_transectiondata_to_csv
+    csv_writer.writerow([col[0] for col in postgres_hook.get_first(select_query)])
+  File "/opt/airflow/dags/transection_data.py", line 366, in <listcomp>
+    csv_writer.writerow([col[0] for col in postgres_hook.get_first(select_query)])
+TypeError: 'datetime.date' object is not subscriptable
+[2024-05-18T08:09:08.774+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=create_transection_data, task_id=save_transectiondata_to_csv, execution_date=20240518T074901, start_date=20240518T080908, end_date=20240518T080908
+[2024-05-18T08:09:08.785+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 538 for task save_transectiondata_to_csv ('datetime.date' object is not subscriptable; 6618)
+[2024-05-18T08:09:08.826+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-05-18T08:09:08.839+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

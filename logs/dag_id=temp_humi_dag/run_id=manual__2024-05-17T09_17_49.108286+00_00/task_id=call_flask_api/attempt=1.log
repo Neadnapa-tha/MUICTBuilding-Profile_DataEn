@@ -1,0 +1,15 @@
+[2024-05-17T09:17:52.590+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: temp_humi_dag.call_flask_api manual__2024-05-17T09:17:49.108286+00:00 [queued]>
+[2024-05-17T09:17:52.598+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: temp_humi_dag.call_flask_api manual__2024-05-17T09:17:49.108286+00:00 [queued]>
+[2024-05-17T09:17:52.599+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-17T09:17:52.609+0000] {taskinstance.py:2191} INFO - Executing <Task(SimpleHttpOperator): call_flask_api> on 2024-05-17 09:17:49.108286+00:00
+[2024-05-17T09:17:52.613+0000] {standard_task_runner.py:60} INFO - Started process 17060 to run task
+[2024-05-17T09:17:52.617+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'temp_humi_dag', 'call_flask_api', 'manual__2024-05-17T09:17:49.108286+00:00', '--job-id', '220', '--raw', '--subdir', 'DAGS_FOLDER/ICTTemp_Humi_DAG.py', '--cfg-path', '/tmp/tmp3guflh7l']
+[2024-05-17T09:17:52.619+0000] {standard_task_runner.py:88} INFO - Job 220: Subtask call_flask_api
+[2024-05-17T09:17:52.652+0000] {task_command.py:423} INFO - Running <TaskInstance: temp_humi_dag.call_flask_api manual__2024-05-17T09:17:49.108286+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-17T09:17:52.723+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Group4' AIRFLOW_CTX_DAG_ID='temp_humi_dag' AIRFLOW_CTX_TASK_ID='call_flask_api' AIRFLOW_CTX_EXECUTION_DATE='2024-05-17T09:17:49.108286+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-17T09:17:49.108286+00:00'
+[2024-05-17T09:17:52.725+0000] {http.py:169} INFO - Calling HTTP method
+[2024-05-17T09:17:52.732+0000] {base.py:83} INFO - Using connection ID 'http_flask_connection' for task execution.
+[2024-05-17T09:17:52.740+0000] {base.py:83} INFO - Using connection ID 'http_flask_connection' for task execution.
+[2024-05-17T09:17:55.836+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=temp_humi_dag, task_id=call_flask_api, execution_date=20240517T091749, start_date=20240517T091752, end_date=20240517T091755
+[2024-05-17T09:17:55.861+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-17T09:17:55.883+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

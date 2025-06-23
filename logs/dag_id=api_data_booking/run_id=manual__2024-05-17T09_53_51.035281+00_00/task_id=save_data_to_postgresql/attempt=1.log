@@ -1,0 +1,3886 @@
+[2024-05-17T09:54:23.570+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_data_booking.save_data_to_postgresql manual__2024-05-17T09:53:51.035281+00:00 [queued]>
+[2024-05-17T09:54:23.575+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_data_booking.save_data_to_postgresql manual__2024-05-17T09:53:51.035281+00:00 [queued]>
+[2024-05-17T09:54:23.576+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-17T09:54:23.583+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): save_data_to_postgresql> on 2024-05-17 09:53:51.035281+00:00
+[2024-05-17T09:54:23.587+0000] {standard_task_runner.py:60} INFO - Started process 1545 to run task
+[2024-05-17T09:54:23.590+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'api_data_booking', 'save_data_to_postgresql', 'manual__2024-05-17T09:53:51.035281+00:00', '--job-id', '285', '--raw', '--subdir', 'DAGS_FOLDER/api_data_booking.py', '--cfg-path', '/tmp/tmpoafq2wau']
+[2024-05-17T09:54:23.592+0000] {standard_task_runner.py:88} INFO - Job 285: Subtask save_data_to_postgresql
+[2024-05-17T09:54:23.621+0000] {task_command.py:423} INFO - Running <TaskInstance: api_data_booking.save_data_to_postgresql manual__2024-05-17T09:53:51.035281+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-17T09:54:23.665+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='api_data_booking' AIRFLOW_CTX_TASK_ID='save_data_to_postgresql' AIRFLOW_CTX_EXECUTION_DATE='2024-05-17T09:53:51.035281+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-17T09:53:51.035281+00:00'
+[2024-05-17T09:54:23.681+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.690+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (64156, 6010, '2023-12-10T15:06:19', '12:00:00', '15:30:00', 210, 'โรงเรียน ศรียาภัย', None, None, '2024-01-05', '2024-01-05', 'jarrussri.pak', 'IT 105', 1, '[{"participantTypeId": 12, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e40\\u0e23\\u0e35\\u0e22\\u0e19", "amountExact": true, "amount": 59}]')
+[2024-05-17T09:54:23.693+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:23.699+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.706+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (64886, 629, '2024-01-03T09:32:25', '08:30:00', '10:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-01-08', '2024-01-08', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:23.709+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:23.716+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.723+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (65178, 629, '2024-01-04T10:38:36', '15:30:00', '17:30:00', 120, '662|ITDS344|1', 'ITDS344', '1', '2024-01-08', '2024-01-08', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:23.728+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:23.734+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.741+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69903, 629, '2024-02-07T16:41:10', '10:30:00', '12:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-01-08', '2024-01-08', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:23.745+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:23.751+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.759+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (65017, 629, '2024-01-03T16:35:25', '15:30:00', '17:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-01-09', '2024-01-09', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:23.762+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:23.769+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.776+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (66161, 629, '2024-01-08T10:49:04', '09:00:00', '12:00:00', 180, '662|ITCS424|2', 'ITCS424', '2', '2024-01-10', '2024-01-10', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:23.780+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:23.786+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.794+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (62309, 629, '2023-12-06T12:38:38', '15:00:00', '17:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-01-11', '2024-01-11', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:23.798+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:23.804+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.810+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (63586, 629, '2023-12-06T12:53:00', '09:00:00', '11:00:00', 120, '662|ITCS392|1', 'ITCS392', '1', '2024-01-12', '2024-01-12', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:23.814+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:23.819+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.827+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (65045, 629, '2024-01-03T16:36:00', '15:30:00', '17:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-01-12', '2024-01-12', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:23.830+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:23.836+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.849+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (64888, 629, '2024-01-03T09:32:25', '08:30:00', '10:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-01-15', '2024-01-15', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:23.852+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:23.860+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.868+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (65180, 629, '2024-01-04T10:38:36', '15:30:00', '17:30:00', 120, '662|ITDS344|1', 'ITDS344', '1', '2024-01-15', '2024-01-15', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:23.871+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:23.877+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.883+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69904, 629, '2024-02-07T16:41:31', '10:30:00', '12:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-01-15', '2024-01-15', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:23.887+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:23.893+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.901+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (63895, 6007, '2023-12-08T13:55:19', '14:00:00', '15:00:00', 60, '', None, None, '2024-01-16', '2024-01-16', 'phichate.suk', 'IT 105', 1, '[{"participantTypeId": 2, "participantType": "\\u0e1a\\u0e38\\u0e04\\u0e25\\u0e32\\u0e01\\u0e23 \\u0e21.\\u0e21\\u0e2b\\u0e34\\u0e14\\u0e25", "amountExact": false, "amount": 5}]')
+[2024-05-17T09:54:23.905+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:23.912+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.921+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (65019, 629, '2024-01-03T16:35:26', '15:30:00', '17:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-01-16', '2024-01-16', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:23.926+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:23.932+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.939+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (61290, 524, '2023-11-07T15:29:38', '09:00:00', '16:00:00', 420, '', None, None, '2024-01-17', '2024-01-17', 'phichate.suk', 'IT 105', 1, '[{"participantTypeId": 2, "participantType": "\\u0e1a\\u0e38\\u0e04\\u0e25\\u0e32\\u0e01\\u0e23 \\u0e21.\\u0e21\\u0e2b\\u0e34\\u0e14\\u0e25", "amountExact": false, "amount": 75}]')
+[2024-05-17T09:54:23.943+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:23.949+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.957+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (62311, 629, '2023-12-06T12:38:38', '15:00:00', '17:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-01-18', '2024-01-18', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:23.960+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:23.966+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.973+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (63587, 629, '2023-12-06T12:53:00', '09:00:00', '11:00:00', 120, '662|ITCS392|1', 'ITCS392', '1', '2024-01-19', '2024-01-19', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:23.977+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:23.983+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:23.995+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69033, 629, '2024-01-16T15:10:11', '13:00:00', '15:00:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-01-19', '2024-01-19', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:23.999+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.005+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.012+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69034, 629, '2024-01-16T15:10:11', '15:00:00', '17:00:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-01-19', '2024-01-19', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.015+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.021+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.029+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (64257, 5844, '2023-12-13T13:32:08', '06:00:00', '20:00:00', 840, '', None, None, '2024-01-20', '2024-01-20', 'phichate.suk', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": false, "amount": 5}]')
+[2024-05-17T09:54:24.032+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.039+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.046+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (64260, 5844, '2023-12-13T13:38:31', '06:00:00', '20:00:00', 840, '', None, None, '2024-01-21', '2024-01-21', 'phichate.suk', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": false, "amount": 5}]')
+[2024-05-17T09:54:24.050+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.056+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.063+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (64890, 629, '2024-01-03T09:32:25', '08:30:00', '10:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-01-22', '2024-01-22', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.068+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.073+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.080+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69905, 629, '2024-02-07T16:41:55', '10:30:00', '12:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-01-22', '2024-01-22', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.083+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.089+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.097+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (65021, 629, '2024-01-03T16:35:26', '15:30:00', '17:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-01-23', '2024-01-23', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.101+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.107+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.116+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69316, 629, '2024-01-19T10:55:03', '09:00:00', '12:00:00', 180, '662|ITCS461|1', 'ITCS461', '1', '2024-01-23', '2024-01-23', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.120+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.126+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.134+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69455, 629, '2024-01-22T09:22:05', '13:30:00', '15:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-01-23', '2024-01-23', 'yunandar.aun', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.139+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.145+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.152+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (66163, 629, '2024-01-08T10:49:39', '09:00:00', '12:00:00', 180, '662|ITCS424|2', 'ITCS424', '2', '2024-01-24', '2024-01-24', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.156+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.162+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.169+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (68607, 629, '2024-01-12T09:51:16', '13:00:00', '15:00:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-01-24', '2024-01-24', 'yunandar.aun', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.173+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.179+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.186+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (68608, 629, '2024-01-12T09:51:16', '15:00:00', '17:00:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-01-24', '2024-01-24', 'yunandar.aun', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.189+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.195+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.203+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (62313, 629, '2023-12-06T12:38:39', '15:00:00', '17:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-01-25', '2024-01-25', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.207+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.214+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.220+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (63588, 629, '2023-12-06T12:53:00', '09:00:00', '11:00:00', 120, '662|ITCS392|1', 'ITCS392', '1', '2024-01-26', '2024-01-26', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.224+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.230+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.236+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69514, 629, '2024-01-23T10:03:47', '13:30:00', '15:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-01-26', '2024-01-26', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.239+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.245+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.252+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69515, 629, '2024-01-23T10:03:48', '15:30:00', '17:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-01-26', '2024-01-26', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.255+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.261+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.269+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (64892, 629, '2024-01-03T09:32:26', '08:30:00', '10:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-01-29', '2024-01-29', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.273+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.279+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.288+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69906, 629, '2024-02-07T16:42:17', '10:30:00', '12:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-01-29', '2024-01-29', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.291+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.298+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.307+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69317, 629, '2024-01-19T10:55:21', '09:00:00', '12:00:00', 180, '662|ITCS461|1', 'ITCS461', '1', '2024-01-30', '2024-01-30', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.310+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.319+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.327+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69491, 629, '2024-01-23T10:03:12', '13:30:00', '15:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-01-30', '2024-01-30', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.330+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.336+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.345+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69492, 629, '2024-01-23T10:03:12', '15:30:00', '17:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-01-30', '2024-01-30', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.349+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.357+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.364+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (66164, 629, '2024-01-08T10:49:59', '09:00:00', '12:00:00', 180, '662|ITCS424|2', 'ITCS424', '2', '2024-01-31', '2024-01-31', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.368+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.374+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.381+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (62315, 629, '2023-12-06T12:38:39', '15:00:00', '17:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-02-01', '2024-02-01', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.385+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.391+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.397+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69640, 5246, '2024-01-26T17:11:58', '09:00:00', '12:00:00', 180, '', None, None, '2024-02-01', '2024-02-01', 'itthiphol.mak', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.400+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.406+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.414+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (63589, 629, '2023-12-06T12:53:00', '09:00:00', '11:00:00', 120, '662|ITCS392|1', 'ITCS392', '1', '2024-02-02', '2024-02-02', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.419+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.425+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.432+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69516, 629, '2024-01-23T10:03:48', '13:30:00', '15:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-02-02', '2024-02-02', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.436+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.443+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.450+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69517, 629, '2024-01-23T10:03:48', '15:30:00', '17:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-02-02', '2024-02-02', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.453+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.461+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.467+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (64894, 629, '2024-01-03T09:32:26', '08:30:00', '10:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-02-05', '2024-02-05', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.471+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.476+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.483+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (65186, 629, '2024-01-04T10:38:37', '15:30:00', '17:30:00', 120, '662|ITDS344|1', 'ITDS344', '1', '2024-02-05', '2024-02-05', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.487+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.493+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.500+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69907, 629, '2024-02-07T16:42:50', '10:30:00', '12:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-02-05', '2024-02-05', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.503+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.509+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.516+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69318, 629, '2024-01-19T10:55:37', '09:00:00', '12:00:00', 180, '662|ITCS461|1', 'ITCS461', '1', '2024-02-06', '2024-02-06', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.523+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.529+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.539+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69493, 629, '2024-01-23T10:03:12', '13:30:00', '15:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-02-06', '2024-02-06', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.542+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.548+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.556+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69494, 629, '2024-01-23T10:03:13', '15:30:00', '17:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-02-06', '2024-02-06', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.559+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.565+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.572+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (66179, 629, '2024-01-08T10:50:16', '09:00:00', '12:00:00', 180, '662|ITCS424|2', 'ITCS424', '2', '2024-02-07', '2024-02-07', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.576+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.583+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.589+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (62317, 629, '2023-12-06T12:38:39', '15:00:00', '17:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-02-08', '2024-02-08', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.593+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.599+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.606+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (63590, 629, '2023-12-06T12:53:00', '09:00:00', '11:00:00', 120, '662|ITCS392|1', 'ITCS392', '1', '2024-02-09', '2024-02-09', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.609+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.616+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.623+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (65188, 629, '2024-01-04T10:38:37', '15:30:00', '17:30:00', 120, '662|ITDS344|1', 'ITDS344', '1', '2024-02-12', '2024-02-12', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.626+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.632+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.639+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69810, 629, '2024-02-06T09:30:10', '08:30:00', '10:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-02-12', '2024-02-12', 'yunandar.aun', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.643+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.650+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.657+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69811, 629, '2024-02-06T09:30:10', '10:30:00', '12:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-02-12', '2024-02-12', 'yunandar.aun', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.661+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.667+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.674+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69495, 629, '2024-01-23T10:03:13', '13:30:00', '15:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-02-13', '2024-02-13', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.678+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.684+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.691+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69496, 629, '2024-01-23T10:03:13', '15:30:00', '17:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-02-13', '2024-02-13', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.694+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.702+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.709+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69689, 629, '2024-01-30T15:52:07', '09:00:00', '12:00:00', 180, '662|ITCS461|1', 'ITCS461', '1', '2024-02-13', '2024-02-13', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.712+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.719+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.726+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (66180, 629, '2024-01-08T10:50:35', '09:00:00', '12:00:00', 180, '662|ITCS424|2', 'ITCS424', '2', '2024-02-14', '2024-02-14', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.729+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.738+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.747+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69616, 2071, '2024-01-26T07:26:09', '13:00:00', '17:00:00', 240, '', None, None, '2024-02-14', '2024-02-14', 'sudarat.nan', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}, {"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": false, "amount": 40}]')
+[2024-05-17T09:54:24.751+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.757+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.764+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (62319, 629, '2023-12-06T12:38:40', '15:00:00', '17:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-02-15', '2024-02-15', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.768+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.774+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.781+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69694, 629, '2024-01-30T15:56:50', '09:00:00', '12:00:00', 180, '662|ITCS461|3', 'ITCS461', '3', '2024-02-15', '2024-02-15', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.785+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.791+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.799+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (63591, 629, '2023-12-06T12:53:00', '09:00:00', '11:00:00', 120, '662|ITCS392|1', 'ITCS392', '1', '2024-02-16', '2024-02-16', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.802+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.809+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.816+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (65190, 629, '2024-01-04T10:38:38', '15:30:00', '17:30:00', 120, '662|ITDS344|1', 'ITDS344', '1', '2024-02-19', '2024-02-19', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.820+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.826+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.832+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69891, 629, '2024-02-07T16:39:55', '08:30:00', '10:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-02-19', '2024-02-19', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.836+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.843+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.850+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69892, 629, '2024-02-07T16:39:55', '10:30:00', '12:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-02-19', '2024-02-19', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.853+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.859+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.867+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69497, 629, '2024-01-23T10:03:13', '13:30:00', '15:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-02-20', '2024-02-20', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.870+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.876+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.883+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69498, 629, '2024-01-23T10:03:13', '15:30:00', '17:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-02-20', '2024-02-20', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.887+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.894+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.902+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (66181, 629, '2024-01-08T10:50:51', '09:00:00', '12:00:00', 180, '662|ITCS424|2', 'ITCS424', '2', '2024-02-21', '2024-02-21', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.905+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.912+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.920+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70360, 6186, '2024-02-20T13:57:54', '13:00:00', '18:00:00', 300, '', None, None, '2024-02-21', '2024-02-21', 'noppawan.ral', 'IT 105', 1, '[{"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": true, "amount": 20}]')
+[2024-05-17T09:54:24.923+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.929+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.936+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (62321, 629, '2023-12-06T12:38:40', '15:00:00', '17:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-02-22', '2024-02-22', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.940+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.946+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.952+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (63592, 629, '2023-12-06T12:53:01', '09:00:00', '11:00:00', 120, '662|ITCS392|1', 'ITCS392', '1', '2024-02-23', '2024-02-23', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.956+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.962+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.968+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69518, 629, '2024-01-23T10:03:48', '13:30:00', '15:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-02-23', '2024-02-23', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.972+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.978+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:24.985+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69519, 629, '2024-01-23T10:03:48', '15:30:00', '17:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-02-23', '2024-02-23', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:24.988+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:24.994+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.001+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70240, 629, '2024-02-20T09:03:00', '15:30:00', '17:30:00', 120, '662|ITDS344|1', 'ITDS344', '1', '2024-02-26', '2024-02-26', 'yunandar.aun', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.004+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.011+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.019+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69499, 629, '2024-01-23T10:03:13', '13:30:00', '15:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-02-27', '2024-02-27', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.023+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.028+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.035+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69500, 629, '2024-01-23T10:03:13', '15:30:00', '17:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-02-27', '2024-02-27', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.039+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.044+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.051+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69691, 629, '2024-01-30T15:52:59', '09:00:00', '12:00:00', 180, '662|ITCS461|1', 'ITCS461', '1', '2024-02-27', '2024-02-27', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.055+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.061+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.067+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (62323, 629, '2023-12-06T12:38:40', '15:00:00', '17:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-02-29', '2024-02-29', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.070+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.077+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.084+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (64845, 629, '2023-12-28T20:59:08', '09:00:00', '12:00:00', 180, '662|ITDS125|2', 'ITDS125', '2', '2024-02-29', '2024-02-29', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.088+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.094+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.101+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (63593, 629, '2023-12-06T12:53:01', '09:00:00', '11:00:00', 120, '662|ITCS392|1', 'ITCS392', '1', '2024-03-01', '2024-03-01', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.105+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.111+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.120+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69520, 629, '2024-01-23T10:03:48', '13:30:00', '15:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-03-01', '2024-03-01', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.125+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.145+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.167+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69521, 629, '2024-01-23T10:03:48', '15:30:00', '17:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-03-01', '2024-03-01', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.174+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.183+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.193+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70137, 4970, '2024-02-19T12:14:35', '12:30:00', '15:00:00', 150, '', None, None, '2024-03-04', '2024-03-04', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": false, "amount": 6}, {"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": false, "amount": 180}]')
+[2024-05-17T09:54:25.196+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.202+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.209+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70140, 4970, '2024-02-19T12:23:18', '15:00:00', '17:15:00', 135, '', None, None, '2024-03-04', '2024-03-04', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": false, "amount": 8}, {"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": false, "amount": 217}]')
+[2024-05-17T09:54:25.213+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.219+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.226+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70147, 4970, '2024-02-19T12:27:42', '08:30:00', '11:30:00', 180, '', None, None, '2024-03-05', '2024-03-05', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": false, "amount": 8}, {"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": false, "amount": 213}]')
+[2024-05-17T09:54:25.229+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.235+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.241+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70151, 4970, '2024-02-19T12:29:03', '12:00:00', '15:00:00', 180, '', None, None, '2024-03-05', '2024-03-05', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": false, "amount": 8}, {"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": false, "amount": 220}]')
+[2024-05-17T09:54:25.246+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.253+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.265+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70156, 4970, '2024-02-19T12:32:18', '15:00:00', '17:15:00', 135, '', None, None, '2024-03-05', '2024-03-05', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": false, "amount": 10}, {"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": false, "amount": 249}]')
+[2024-05-17T09:54:25.268+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.274+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.281+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70161, 4970, '2024-02-19T12:34:33', '08:30:00', '12:00:00', 210, '', None, None, '2024-03-06', '2024-03-06', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": false, "amount": 10}, {"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": false, "amount": 244}]')
+[2024-05-17T09:54:25.284+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.291+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.298+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70167, 4970, '2024-02-19T12:37:41', '14:30:00', '17:15:00', 165, '', None, None, '2024-03-06', '2024-03-06', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": false, "amount": 6}, {"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": false, "amount": 164}]')
+[2024-05-17T09:54:25.302+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.308+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.316+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70636, 6228, '2024-03-06T13:35:38', '17:15:00', '19:00:00', 105, '', None, None, '2024-03-06', '2024-03-06', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": false, "amount": 1}, {"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": false, "amount": 2}]')
+[2024-05-17T09:54:25.319+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.325+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.332+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70170, 4970, '2024-02-19T12:39:52', '08:30:00', '12:30:00', 240, '', None, None, '2024-03-07', '2024-03-07', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": false, "amount": 11}, {"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": false, "amount": 283}]')
+[2024-05-17T09:54:25.335+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.342+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.349+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70175, 4970, '2024-02-19T12:41:15', '12:30:00', '15:00:00', 150, '', None, None, '2024-03-07', '2024-03-07', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": false, "amount": 6}, {"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": false, "amount": 182}]')
+[2024-05-17T09:54:25.352+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.358+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.365+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70181, 4970, '2024-02-19T12:43:25', '15:00:00', '17:15:00', 135, '', None, None, '2024-03-07', '2024-03-07', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": false, "amount": 16}, {"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": false, "amount": 395}]')
+[2024-05-17T09:54:25.369+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.375+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.382+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70187, 4970, '2024-02-19T12:45:03', '08:30:00', '12:00:00', 210, '', None, None, '2024-03-08', '2024-03-08', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": false, "amount": 16}, {"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": false, "amount": 412}]')
+[2024-05-17T09:54:25.385+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.392+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.409+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70190, 4970, '2024-02-19T12:46:25', '12:00:00', '15:00:00', 180, '', None, None, '2024-03-08', '2024-03-08', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": false, "amount": 8}, {"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": false, "amount": 203}]')
+[2024-05-17T09:54:25.412+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.420+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.428+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70194, 4970, '2024-02-19T12:48:11', '15:00:00', '17:15:00', 135, '', None, None, '2024-03-08', '2024-03-08', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": false, "amount": 8}, {"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": false, "amount": 204}]')
+[2024-05-17T09:54:25.432+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.440+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.449+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69893, 629, '2024-02-07T16:39:55', '08:30:00', '10:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-03-11', '2024-03-11', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.453+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.460+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.468+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69894, 629, '2024-02-07T16:39:55', '10:30:00', '12:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-03-11', '2024-03-11', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.471+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.478+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.486+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70231, 629, '2024-02-20T09:02:29', '15:30:00', '17:30:00', 120, '662|ITDS344|1', 'ITDS344', '1', '2024-03-11', '2024-03-11', 'yunandar.aun', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.489+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.496+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.503+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69501, 629, '2024-01-23T10:03:13', '13:30:00', '15:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-03-12', '2024-03-12', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.507+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.514+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.523+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69502, 629, '2024-01-23T10:03:14', '15:30:00', '17:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-03-12', '2024-03-12', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.527+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.533+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.540+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70771, 629, '2024-03-12T09:17:26', '09:00:00', '12:00:00', 180, '662|ITCS122|4', 'ITCS122', '4', '2024-03-12', '2024-03-12', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.543+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.549+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.557+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70592, 1942, '2024-03-01T17:11:17', '13:00:00', '16:00:00', 180, 'Cyber Club 1.5', None, None, '2024-03-13', '2024-03-13', 'vasaka.vis', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}, {"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": true, "amount": 10}]')
+[2024-05-17T09:54:25.560+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.567+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.574+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (62325, 629, '2023-12-06T12:38:40', '15:00:00', '17:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-03-14', '2024-03-14', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.578+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.584+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.591+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70936, 629, '2024-03-14T12:55:24', '13:00:00', '15:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-03-14', '2024-03-14', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.594+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.600+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.607+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (63594, 629, '2023-12-06T12:53:01', '09:00:00', '11:00:00', 120, '662|ITCS392|1', 'ITCS392', '1', '2024-03-15', '2024-03-15', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.610+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.616+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.623+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69522, 629, '2024-01-23T10:03:49', '13:30:00', '15:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-03-15', '2024-03-15', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.626+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.632+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.639+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69523, 629, '2024-01-23T10:03:49', '15:30:00', '17:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-03-15', '2024-03-15', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.644+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.650+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.657+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70723, 6151, '2024-03-08T15:41:00', '07:00:00', '17:00:00', 600, '', None, None, '2024-03-16', '2024-03-16', 'sudarat.nan', 'IT 105', 1, '[{"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": false, "amount": 40}]')
+[2024-05-17T09:54:25.660+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.666+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.673+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69895, 629, '2024-02-07T16:39:55', '08:30:00', '10:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-03-18', '2024-03-18', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.677+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.684+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.691+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69896, 629, '2024-02-07T16:39:55', '10:30:00', '12:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-03-18', '2024-03-18', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.694+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.701+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.708+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70233, 629, '2024-02-20T09:02:29', '15:30:00', '17:30:00', 120, '662|ITDS344|1', 'ITDS344', '1', '2024-03-18', '2024-03-18', 'yunandar.aun', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.712+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.718+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.726+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69503, 629, '2024-01-23T10:03:14', '13:30:00', '15:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-03-19', '2024-03-19', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.729+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.735+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.742+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69504, 629, '2024-01-23T10:03:14', '15:30:00', '17:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-03-19', '2024-03-19', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.747+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.754+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.761+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (71001, 4907, '2024-03-15T10:42:24', '09:00:00', '12:00:00', 180, 'สอบคัดเลือกตำแหน่งนักประชาสัมพันธ์', None, None, '2024-03-20', '2024-03-20', 'phichate.suk', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}, {"participantTypeId": 4, "participantType": "\\u0e1a\\u0e38\\u0e04\\u0e04\\u0e25\\u0e17\\u0e31\\u0e48\\u0e27\\u0e44\\u0e1b", "amountExact": false, "amount": 32}]')
+[2024-05-17T09:54:25.765+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.771+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.778+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (62327, 629, '2023-12-06T12:38:41', '15:00:00', '17:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-03-21', '2024-03-21', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.782+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.788+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.795+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70374, 629, '2024-02-21T08:52:27', '10:00:00', '12:00:00', 120, '662|ITCT111|1', 'ITCT111', '1', '2024-03-21', '2024-03-21', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.798+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.804+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.811+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70937, 629, '2024-03-14T12:55:41', '13:00:00', '15:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-03-21', '2024-03-21', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.815+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.821+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.828+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (63595, 629, '2023-12-06T12:53:01', '09:00:00', '11:00:00', 120, '662|ITCS392|1', 'ITCS392', '1', '2024-03-22', '2024-03-22', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.832+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.838+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.846+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69524, 629, '2024-01-23T10:03:49', '13:30:00', '15:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-03-22', '2024-03-22', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.849+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.854+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.862+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69525, 629, '2024-01-23T10:03:49', '15:30:00', '17:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-03-22', '2024-03-22', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.865+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.871+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.877+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69897, 629, '2024-02-07T16:39:56', '08:30:00', '10:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-03-25', '2024-03-25', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.880+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.888+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.896+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69898, 629, '2024-02-07T16:39:56', '10:30:00', '12:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-03-25', '2024-03-25', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.900+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.907+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.913+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70235, 629, '2024-02-20T09:02:29', '15:30:00', '17:30:00', 120, '662|ITDS344|1', 'ITDS344', '1', '2024-03-25', '2024-03-25', 'yunandar.aun', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.920+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.926+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.934+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69505, 629, '2024-01-23T10:03:14', '13:30:00', '15:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-03-26', '2024-03-26', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.937+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.943+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.950+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69506, 629, '2024-01-23T10:03:14', '15:30:00', '17:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-03-26', '2024-03-26', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.954+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.960+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.967+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70750, 629, '2024-03-11T14:11:58', '09:00:00', '12:00:00', 180, '662|ITCS335|2', 'ITCS335', '2', '2024-03-26', '2024-03-26', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.971+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.977+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:25.984+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (71199, 629, '2024-03-21T14:24:28', '12:00:00', '13:00:00', 60, '662|ITCS461|1', 'ITCS461', '1', '2024-03-26', '2024-03-26', 'yunandar.aun', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:25.989+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:25.995+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.003+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (71317, 6288, '2024-03-26T17:29:10', '13:00:00', '15:00:00', 120, '', None, None, '2024-03-27', '2024-03-27', 'noppawan.ral', 'IT 105', 1, '[{"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": true, "amount": 5}]')
+[2024-05-17T09:54:26.006+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.013+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.020+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (62329, 629, '2023-12-06T12:38:41', '15:00:00', '17:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-03-28', '2024-03-28', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.024+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.029+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.036+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (71369, 629, '2024-03-28T13:10:43', '13:00:00', '15:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-03-28', '2024-03-28', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.041+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.046+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.053+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (63596, 629, '2023-12-06T12:53:01', '09:00:00', '11:00:00', 120, '662|ITCS392|1', 'ITCS392', '1', '2024-03-29', '2024-03-29', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.056+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.063+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.070+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69526, 629, '2024-01-23T10:03:49', '13:30:00', '15:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-03-29', '2024-03-29', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.073+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.079+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.086+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69527, 629, '2024-01-23T10:03:49', '15:30:00', '17:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-03-29', '2024-03-29', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.089+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.095+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.103+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (71302, 629, '2024-03-26T13:09:02', '09:00:00', '12:00:00', 180, '662|ITCS461|3', 'ITCS461', '3', '2024-03-30', '2024-03-30', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.107+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.113+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.119+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69899, 629, '2024-02-07T16:39:56', '08:30:00', '10:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-04-01', '2024-04-01', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.123+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.129+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.136+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69900, 629, '2024-02-07T16:39:56', '10:30:00', '12:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-04-01', '2024-04-01', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.139+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.144+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.151+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70237, 629, '2024-02-20T09:02:30', '15:30:00', '17:30:00', 120, '662|ITDS344|1', 'ITDS344', '1', '2024-04-01', '2024-04-01', 'yunandar.aun', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.154+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.160+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.168+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69507, 629, '2024-01-23T10:03:14', '13:30:00', '15:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-04-02', '2024-04-02', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.173+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.179+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.186+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69508, 629, '2024-01-23T10:03:14', '15:30:00', '17:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-04-02', '2024-04-02', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.189+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.195+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.203+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69692, 629, '2024-01-30T15:55:51', '09:00:00', '12:00:00', 180, '662|ITCS461|1', 'ITCS461', '1', '2024-04-02', '2024-04-02', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.207+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.213+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.221+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (71352, 629, '2024-03-27T20:49:51', '10:00:00', '12:00:00', 120, '662|ITLG101|3', 'ITLG101', '3', '2024-04-03', '2024-04-03', 'itthiphol.mak', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.225+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.231+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.239+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (62331, 629, '2023-12-06T12:38:41', '15:00:00', '17:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-04-04', '2024-04-04', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.243+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.249+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.256+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70063, 5246, '2024-02-15T09:21:32', '09:00:00', '10:30:00', 90, '', None, None, '2024-04-04', '2024-04-04', 'itthiphol.mak', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": false, "amount": 5}, {"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": false, "amount": 164}]')
+[2024-05-17T09:54:26.260+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.266+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.273+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70939, 629, '2024-03-14T12:56:42', '13:00:00', '15:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-04-04', '2024-04-04', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.276+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.282+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.289+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (71353, 5234, '2024-03-27T20:56:39', '10:30:00', '12:00:00', 90, '', None, None, '2024-04-04', '2024-04-04', 'itthiphol.mak', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.292+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.298+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.305+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (63597, 629, '2023-12-06T12:53:01', '09:00:00', '11:00:00', 120, '662|ITCS392|1', 'ITCS392', '1', '2024-04-05', '2024-04-05', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.310+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.316+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.323+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69528, 629, '2024-01-23T10:03:49', '13:30:00', '15:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-04-05', '2024-04-05', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.326+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.332+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.339+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69529, 629, '2024-01-23T10:03:49', '15:30:00', '17:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-04-05', '2024-04-05', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.344+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.350+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.356+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69509, 629, '2024-01-23T10:03:15', '13:30:00', '15:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-04-09', '2024-04-09', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.359+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.366+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.372+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69510, 629, '2024-01-23T10:03:15', '15:30:00', '17:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-04-09', '2024-04-09', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.376+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.382+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.389+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69693, 629, '2024-01-30T15:56:17', '09:00:00', '12:00:00', 180, '662|ITCS461|1', 'ITCS461', '1', '2024-04-09', '2024-04-09', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.393+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.399+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.405+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (71621, 524, '2024-04-10T14:46:34', '15:00:00', '17:00:00', 120, '', None, None, '2024-04-10', '2024-04-10', 'phichate.suk', 'IT 105', 1, '[{"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": true, "amount": 2}]')
+[2024-05-17T09:54:26.409+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.414+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.422+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (62333, 629, '2023-12-06T12:38:41', '15:00:00', '17:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-04-11', '2024-04-11', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.426+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.432+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.439+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70940, 629, '2024-03-14T12:56:55', '13:00:00', '15:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-04-11', '2024-04-11', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.442+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.448+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.456+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69530, 629, '2024-01-23T10:03:50', '13:30:00', '15:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-04-12', '2024-04-12', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.459+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.466+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.473+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69531, 629, '2024-01-23T10:03:50', '15:30:00', '17:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-04-12', '2024-04-12', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.477+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.483+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.492+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70050, 6166, '2024-02-14T09:30:41', '14:00:00', '16:00:00', 120, '', None, None, '2024-04-17', '2024-04-17', 'kanyasorn.sud', 'IT 105', 1, '[{"participantTypeId": 13, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 \\u0e21.\\u0e21\\u0e2b\\u0e34\\u0e14\\u0e25", "amountExact": false, "amount": 65}]')
+[2024-05-17T09:54:26.495+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.504+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.511+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (62335, 629, '2023-12-06T12:38:42', '15:00:00', '17:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-04-18', '2024-04-18', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.515+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.522+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.531+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70941, 629, '2024-03-14T12:57:11', '13:00:00', '15:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-04-18', '2024-04-18', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.535+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.545+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.555+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (63599, 629, '2023-12-06T12:53:02', '09:00:00', '11:00:00', 120, '662|ITCS392|1', 'ITCS392', '1', '2024-04-19', '2024-04-19', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.558+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.565+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.571+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69532, 629, '2024-01-23T10:03:50', '13:30:00', '15:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-04-19', '2024-04-19', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.575+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.581+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.587+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69533, 629, '2024-01-23T10:03:50', '15:30:00', '17:30:00', 120, '662|ITDS283|2', 'ITDS283', '2', '2024-04-19', '2024-04-19', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.590+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.596+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.604+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70461, 629, '2024-02-27T14:18:51', '11:00:00', '12:00:00', 60, '662|ITCS392|1', 'ITCS392', '1', '2024-04-19', '2024-04-19', 'yunandar.aun', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.607+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.614+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.621+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69901, 629, '2024-02-07T16:39:56', '08:30:00', '10:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-04-22', '2024-04-22', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.626+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.632+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.639+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69902, 629, '2024-02-07T16:39:56', '10:30:00', '12:30:00', 120, '662|ITDS332|1', 'ITDS332', '1', '2024-04-22', '2024-04-22', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.642+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.648+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.655+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70239, 629, '2024-02-20T09:02:30', '15:30:00', '17:30:00', 120, '662|ITDS344|1', 'ITDS344', '1', '2024-04-22', '2024-04-22', 'yunandar.aun', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.658+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.664+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.671+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69511, 629, '2024-01-23T10:03:15', '13:30:00', '15:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-04-23', '2024-04-23', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.674+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.680+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.687+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (69512, 629, '2024-01-23T10:03:15', '15:30:00', '17:30:00', 120, '662|ITDS283|1', 'ITDS283', '1', '2024-04-23', '2024-04-23', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.690+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.697+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.704+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70652, 629, '2024-03-06T16:28:15', '09:00:00', '12:00:00', 180, '662|ITCS122|2', 'ITCS122', '2', '2024-04-24', '2024-04-24', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.708+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.714+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.721+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (71905, 6341, '2024-04-23T10:44:44', '13:00:00', '17:00:00', 240, '', None, None, '2024-04-24', '2024-04-24', 'noppawan.ral', 'IT 105', 1, '[{"participantTypeId": 3, "participantType": "\\u0e19\\u0e31\\u0e01\\u0e28\\u0e36\\u0e01\\u0e29\\u0e32 ICT", "amountExact": true, "amount": 30}]')
+[2024-05-17T09:54:26.724+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.731+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.738+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (62337, 629, '2023-12-06T12:38:42', '15:00:00', '17:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-04-25', '2024-04-25', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.742+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.747+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.754+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (64846, 629, '2023-12-28T20:59:33', '09:00:00', '12:00:00', 180, '662|ITDS125|2', 'ITDS125', '2', '2024-04-25', '2024-04-25', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.758+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.764+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:54:26.771+0000] {sql.py:450} INFO - Running statement: 
+        INSERT INTO booking (
+            booking_id,
+            activity_id,
+            booking_request_date,
+            booking_start_time,
+            booking_end_time,
+            duration_in_minute,
+            remarks,
+            subject_code,
+            section,
+            booking_start_date,
+            booking_end_date,
+            requester_name,
+            room,
+            floor,
+            participants
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    , parameters: (70938, 629, '2024-03-14T12:56:13', '13:00:00', '15:00:00', 120, '662|ITCS123|3', 'ITCS123', '3', '2024-04-25', '2024-04-25', 'warunthorn.jea', 'IT 105', 1, '[{"participantTypeId": 1, "participantType": "\\u0e08\\u0e19\\u0e17. ICT", "amountExact": true, "amount": 1}]')
+[2024-05-17T09:54:26.775+0000] {sql.py:459} INFO - Rows affected: 1
+[2024-05-17T09:54:26.777+0000] {api_data_booking.py:148} INFO - Successfully inserted booking data into PostgreSQL.
+[2024-05-17T09:54:26.778+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-05-17T09:54:26.784+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=api_data_booking, task_id=save_data_to_postgresql, execution_date=20240517T095351, start_date=20240517T095423, end_date=20240517T095426
+[2024-05-17T09:54:26.816+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-17T09:54:26.829+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

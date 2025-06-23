@@ -1,0 +1,19 @@
+[2024-05-20T03:26:59.120+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_data_booking.delete_booking_data_into_db scheduled__2024-05-18T00:00:00+00:00 [queued]>
+[2024-05-20T03:26:59.135+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_data_booking.delete_booking_data_into_db scheduled__2024-05-18T00:00:00+00:00 [queued]>
+[2024-05-20T03:26:59.137+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-20T03:26:59.165+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): delete_booking_data_into_db> on 2024-05-18 00:00:00+00:00
+[2024-05-20T03:26:59.170+0000] {standard_task_runner.py:60} INFO - Started process 241 to run task
+[2024-05-20T03:26:59.184+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'api_data_booking', 'delete_booking_data_into_db', 'scheduled__2024-05-18T00:00:00+00:00', '--job-id', '608', '--raw', '--subdir', 'DAGS_FOLDER/api_data_booking.py', '--cfg-path', '/tmp/tmphejc_83d']
+[2024-05-20T03:26:59.202+0000] {standard_task_runner.py:88} INFO - Job 608: Subtask delete_booking_data_into_db
+[2024-05-20T03:26:59.299+0000] {task_command.py:423} INFO - Running <TaskInstance: api_data_booking.delete_booking_data_into_db scheduled__2024-05-18T00:00:00+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-20T03:26:59.535+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='api_data_booking' AIRFLOW_CTX_TASK_ID='delete_booking_data_into_db' AIRFLOW_CTX_EXECUTION_DATE='2024-05-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-18T00:00:00+00:00'
+[2024-05-20T03:26:59.564+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T03:26:59.598+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T03:26:59.608+0000] {sql.py:450} INFO - Running statement: 
+        DELETE FROM booking;
+        , parameters: None
+[2024-05-20T03:26:59.619+0000] {sql.py:459} INFO - Rows affected: 176
+[2024-05-20T03:26:59.625+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-05-20T03:26:59.639+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=api_data_booking, task_id=delete_booking_data_into_db, execution_date=20240518T000000, start_date=20240520T032659, end_date=20240520T032659
+[2024-05-20T03:26:59.696+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-20T03:26:59.730+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

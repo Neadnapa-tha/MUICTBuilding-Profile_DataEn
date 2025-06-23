@@ -1,0 +1,24 @@
+[2024-05-20T15:36:24.832+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_data_booking_test.create_participant_data_into_db manual__2024-05-20T15:36:18.220976+00:00 [queued]>
+[2024-05-20T15:36:24.842+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_data_booking_test.create_participant_data_into_db manual__2024-05-20T15:36:18.220976+00:00 [queued]>
+[2024-05-20T15:36:24.844+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-20T15:36:24.858+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_participant_data_into_db> on 2024-05-20 15:36:18.220976+00:00
+[2024-05-20T15:36:24.867+0000] {standard_task_runner.py:60} INFO - Started process 15577 to run task
+[2024-05-20T15:36:24.874+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'api_data_booking_test', 'create_participant_data_into_db', 'manual__2024-05-20T15:36:18.220976+00:00', '--job-id', '911', '--raw', '--subdir', 'DAGS_FOLDER/api_data_booking.py', '--cfg-path', '/tmp/tmpmz2rcco9']
+[2024-05-20T15:36:24.880+0000] {standard_task_runner.py:88} INFO - Job 911: Subtask create_participant_data_into_db
+[2024-05-20T15:36:24.981+0000] {task_command.py:423} INFO - Running <TaskInstance: api_data_booking_test.create_participant_data_into_db manual__2024-05-20T15:36:18.220976+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-20T15:36:25.086+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='api_data_booking_test' AIRFLOW_CTX_TASK_ID='create_participant_data_into_db' AIRFLOW_CTX_EXECUTION_DATE='2024-05-20T15:36:18.220976+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-20T15:36:18.220976+00:00'
+[2024-05-20T15:36:25.103+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T15:36:25.123+0000] {sql.py:450} INFO - Running statement: 
+            CREATE TABLE IF NOT EXISTS participant (
+                booking_id INT,
+                participant_type_id INT,
+                participant_type VARCHAR(255),
+                amount_exact VARCHAR(10),
+                amount INT
+            );
+        , parameters: None
+[2024-05-20T15:36:25.136+0000] {api_data_booking.py:228} INFO - Successfully created table.
+[2024-05-20T15:36:25.139+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-05-20T15:36:25.163+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=api_data_booking_test, task_id=create_participant_data_into_db, execution_date=20240520T153618, start_date=20240520T153624, end_date=20240520T153625
+[2024-05-20T15:36:25.210+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-20T15:36:25.244+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

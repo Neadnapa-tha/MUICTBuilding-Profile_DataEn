@@ -1,0 +1,20 @@
+[2024-05-20T03:52:38.177+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: temp_humi_dag_csv.save_data_into_db manual__2024-05-20T03:42:30.996419+00:00 [queued]>
+[2024-05-20T03:52:38.187+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: temp_humi_dag_csv.save_data_into_db manual__2024-05-20T03:42:30.996419+00:00 [queued]>
+[2024-05-20T03:52:38.188+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-20T03:52:38.198+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): save_data_into_db> on 2024-05-20 03:42:30.996419+00:00
+[2024-05-20T03:52:38.203+0000] {standard_task_runner.py:60} INFO - Started process 2354 to run task
+[2024-05-20T03:52:38.208+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'temp_humi_dag_csv', 'save_data_into_db', 'manual__2024-05-20T03:42:30.996419+00:00', '--job-id', '715', '--raw', '--subdir', 'DAGS_FOLDER/ICTTemp_Humi_CSV.py', '--cfg-path', '/tmp/tmptbr3421j']
+[2024-05-20T03:52:38.211+0000] {standard_task_runner.py:88} INFO - Job 715: Subtask save_data_into_db
+[2024-05-20T03:52:38.250+0000] {task_command.py:423} INFO - Running <TaskInstance: temp_humi_dag_csv.save_data_into_db manual__2024-05-20T03:42:30.996419+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-20T03:52:38.404+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Group4' AIRFLOW_CTX_DAG_ID='temp_humi_dag_csv' AIRFLOW_CTX_TASK_ID='save_data_into_db' AIRFLOW_CTX_EXECUTION_DATE='2024-05-20T03:42:30.996419+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-20T03:42:30.996419+00:00'
+[2024-05-20T03:52:38.438+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T03:52:38.447+0000] {sql.py:450} INFO - Running statement: 
+                INSERT INTO test_temp_and_humi (date, time, temperature, humidity, heat)
+                VALUES (%s, %s, %s, %s, %s);
+                , parameters: ('2024-01-01', '00:00:00', 23.76, 49.02, 74.77)
+[2024-05-20T03:52:38.452+0000] {logging_mixin.py:188} INFO - Error: duplicate key value violates unique constraint "test_temp_and_humi_pkey"
+DETAIL:  Key (date, "time")=(2024-01-01, 00:00:00) already exists.
+[2024-05-20T03:52:38.456+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-05-20T03:52:38.465+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=temp_humi_dag_csv, task_id=save_data_into_db, execution_date=20240520T034230, start_date=20240520T035238, end_date=20240520T035238
+[2024-05-20T03:52:38.500+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-20T03:52:38.515+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

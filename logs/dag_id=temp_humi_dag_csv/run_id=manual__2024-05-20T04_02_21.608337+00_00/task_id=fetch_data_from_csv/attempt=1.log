@@ -1,0 +1,13 @@
+[2024-05-20T04:02:24.514+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: temp_humi_dag_csv.fetch_data_from_csv manual__2024-05-20T04:02:21.608337+00:00 [queued]>
+[2024-05-20T04:02:24.520+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: temp_humi_dag_csv.fetch_data_from_csv manual__2024-05-20T04:02:21.608337+00:00 [queued]>
+[2024-05-20T04:02:24.521+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-20T04:02:24.528+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): fetch_data_from_csv> on 2024-05-20 04:02:21.608337+00:00
+[2024-05-20T04:02:24.532+0000] {standard_task_runner.py:60} INFO - Started process 3153 to run task
+[2024-05-20T04:02:24.535+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'temp_humi_dag_csv', 'fetch_data_from_csv', 'manual__2024-05-20T04:02:21.608337+00:00', '--job-id', '744', '--raw', '--subdir', 'DAGS_FOLDER/ICTTemp_Humi_CSV.py', '--cfg-path', '/tmp/tmp51shu49z']
+[2024-05-20T04:02:24.537+0000] {standard_task_runner.py:88} INFO - Job 744: Subtask fetch_data_from_csv
+[2024-05-20T04:02:24.567+0000] {task_command.py:423} INFO - Running <TaskInstance: temp_humi_dag_csv.fetch_data_from_csv manual__2024-05-20T04:02:21.608337+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-20T04:02:24.717+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Group4' AIRFLOW_CTX_DAG_ID='temp_humi_dag_csv' AIRFLOW_CTX_TASK_ID='fetch_data_from_csv' AIRFLOW_CTX_EXECUTION_DATE='2024-05-20T04:02:21.608337+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-20T04:02:21.608337+00:00'
+[2024-05-20T04:02:24.771+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-05-20T04:02:24.781+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=temp_humi_dag_csv, task_id=fetch_data_from_csv, execution_date=20240520T040221, start_date=20240520T040224, end_date=20240520T040224
+[2024-05-20T04:02:24.833+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-20T04:02:24.862+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

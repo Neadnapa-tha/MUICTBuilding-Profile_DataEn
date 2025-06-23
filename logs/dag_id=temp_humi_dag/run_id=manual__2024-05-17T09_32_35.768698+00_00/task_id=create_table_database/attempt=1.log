@@ -1,0 +1,25 @@
+[2024-05-17T09:32:37.310+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: temp_humi_dag.create_table_database manual__2024-05-17T09:32:35.768698+00:00 [queued]>
+[2024-05-17T09:32:37.315+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: temp_humi_dag.create_table_database manual__2024-05-17T09:32:35.768698+00:00 [queued]>
+[2024-05-17T09:32:37.316+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-17T09:32:37.323+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_table_database> on 2024-05-17 09:32:35.768698+00:00
+[2024-05-17T09:32:37.326+0000] {standard_task_runner.py:60} INFO - Started process 377 to run task
+[2024-05-17T09:32:37.328+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'temp_humi_dag', 'create_table_database', 'manual__2024-05-17T09:32:35.768698+00:00', '--job-id', '267', '--raw', '--subdir', 'DAGS_FOLDER/ICTTemp_Humi_DAG.py', '--cfg-path', '/tmp/tmpei43z_9g']
+[2024-05-17T09:32:37.331+0000] {standard_task_runner.py:88} INFO - Job 267: Subtask create_table_database
+[2024-05-17T09:32:37.359+0000] {task_command.py:423} INFO - Running <TaskInstance: temp_humi_dag.create_table_database manual__2024-05-17T09:32:35.768698+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-17T09:32:37.403+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Group4' AIRFLOW_CTX_DAG_ID='temp_humi_dag' AIRFLOW_CTX_TASK_ID='create_table_database' AIRFLOW_CTX_EXECUTION_DATE='2024-05-17T09:32:35.768698+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-17T09:32:35.768698+00:00'
+[2024-05-17T09:32:37.409+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T09:32:37.417+0000] {sql.py:450} INFO - Running statement: 
+                CREATE TABLE IF NOT EXISTS temp_and_humi (
+                date DATE NOT NULL,
+                time TIME NOT NULL,
+                temperature DECIMAL(5,2) NOT NULL,
+                humidity DECIMAL(5,2) NOT NULL,
+                heat DECIMAL(5,2) NOT NULL,
+                PRIMARY KEY (date, time)
+                );
+        , parameters: None
+[2024-05-17T09:32:37.421+0000] {logging_mixin.py:188} INFO - Table 'booking' created successfully or already exists.
+[2024-05-17T09:32:37.422+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-05-17T09:32:37.428+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=temp_humi_dag, task_id=create_table_database, execution_date=20240517T093235, start_date=20240517T093237, end_date=20240517T093237
+[2024-05-17T09:32:37.461+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-17T09:32:37.475+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

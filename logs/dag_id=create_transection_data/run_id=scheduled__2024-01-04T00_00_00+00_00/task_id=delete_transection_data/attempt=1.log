@@ -1,0 +1,16 @@
+[2024-05-17T10:08:03.920+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: create_transection_data.delete_transection_data scheduled__2024-01-04T00:00:00+00:00 [queued]>
+[2024-05-17T10:08:03.950+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: create_transection_data.delete_transection_data scheduled__2024-01-04T00:00:00+00:00 [queued]>
+[2024-05-17T10:08:03.954+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-17T10:08:03.988+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): delete_transection_data> on 2024-01-04 00:00:00+00:00
+[2024-05-17T10:08:04.006+0000] {standard_task_runner.py:60} INFO - Started process 2396 to run task
+[2024-05-17T10:08:04.056+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'create_transection_data', 'delete_transection_data', 'scheduled__2024-01-04T00:00:00+00:00', '--job-id', '332', '--raw', '--subdir', 'DAGS_FOLDER/transection_data.py', '--cfg-path', '/tmp/tmpki3v0e_4']
+[2024-05-17T10:08:04.064+0000] {standard_task_runner.py:88} INFO - Job 332: Subtask delete_transection_data
+[2024-05-17T10:08:04.303+0000] {task_command.py:423} INFO - Running <TaskInstance: create_transection_data.delete_transection_data scheduled__2024-01-04T00:00:00+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-17T10:08:04.523+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='create_transection_data' AIRFLOW_CTX_TASK_ID='delete_transection_data' AIRFLOW_CTX_EXECUTION_DATE='2024-01-04T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-04T00:00:00+00:00'
+[2024-05-17T10:08:04.549+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T10:08:04.572+0000] {sql.py:450} INFO - Running statement: DROP TABLE IF EXISTS transsection;, parameters: None
+[2024-05-17T10:08:04.584+0000] {transection_data.py:131} INFO - Successfully deleted data from transsection table.
+[2024-05-17T10:08:04.587+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-05-17T10:08:04.602+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=create_transection_data, task_id=delete_transection_data, execution_date=20240104T000000, start_date=20240517T100803, end_date=20240517T100804
+[2024-05-17T10:08:04.659+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-17T10:08:04.746+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

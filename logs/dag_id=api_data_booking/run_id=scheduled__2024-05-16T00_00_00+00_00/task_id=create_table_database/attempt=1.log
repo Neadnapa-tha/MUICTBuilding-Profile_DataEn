@@ -1,0 +1,34 @@
+[2024-05-17T06:06:03.628+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_data_booking.create_table_database scheduled__2024-05-16T00:00:00+00:00 [queued]>
+[2024-05-17T06:06:03.634+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_data_booking.create_table_database scheduled__2024-05-16T00:00:00+00:00 [queued]>
+[2024-05-17T06:06:03.635+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-17T06:06:03.642+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_table_database> on 2024-05-16 00:00:00+00:00
+[2024-05-17T06:06:03.647+0000] {standard_task_runner.py:60} INFO - Started process 5670 to run task
+[2024-05-17T06:06:03.652+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'api_data_booking', 'create_table_database', 'scheduled__2024-05-16T00:00:00+00:00', '--job-id', '188', '--raw', '--subdir', 'DAGS_FOLDER/api_data_booking.py', '--cfg-path', '/tmp/tmpo23ovnf6']
+[2024-05-17T06:06:03.656+0000] {standard_task_runner.py:88} INFO - Job 188: Subtask create_table_database
+[2024-05-17T06:06:03.691+0000] {task_command.py:423} INFO - Running <TaskInstance: api_data_booking.create_table_database scheduled__2024-05-16T00:00:00+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-17T06:06:03.732+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='api_data_booking' AIRFLOW_CTX_TASK_ID='create_table_database' AIRFLOW_CTX_EXECUTION_DATE='2024-05-16T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-16T00:00:00+00:00'
+[2024-05-17T06:06:03.739+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-17T06:06:03.749+0000] {sql.py:450} INFO - Running statement: 
+        CREATE TABLE IF NOT EXISTS booking (
+            id SERIAL PRIMARY KEY,
+            activity_id VARCHAR(255) NOT NULL,
+            booking_request_date DATE NOT NULL,
+            booking_start_time TIME NOT NULL,
+            booking_end_time TIME NOT NULL,
+            duration_in_minute INTEGER NOT NULL,
+            remarks VARCHAR(255),
+            subject_code VARCHAR(50),
+            section VARCHAR(10),
+            booking_start_date DATE NOT NULL,
+            booking_end_date DATE NOT NULL,
+            requester_name VARCHAR(255) NOT NULL,
+            room VARCHAR(50),
+            floor VARCHAR(50),
+            participants JSONB
+        );
+        , parameters: None
+[2024-05-17T06:06:03.773+0000] {logging_mixin.py:188} INFO - Table 'booking' created successfully or already exists.
+[2024-05-17T06:06:03.773+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-05-17T06:06:03.779+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=api_data_booking, task_id=create_table_database, execution_date=20240516T000000, start_date=20240517T060603, end_date=20240517T060603
+[2024-05-17T06:06:03.828+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-17T06:06:03.847+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

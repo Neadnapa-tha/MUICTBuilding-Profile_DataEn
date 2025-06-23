@@ -1,0 +1,13 @@
+[2024-05-20T13:13:51.365+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_data_attendance_test.get_jwt_token manual__2024-05-20T13:13:50.909366+00:00 [queued]>
+[2024-05-20T13:13:51.375+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_data_attendance_test.get_jwt_token manual__2024-05-20T13:13:50.909366+00:00 [queued]>
+[2024-05-20T13:13:51.378+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-20T13:13:51.420+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): get_jwt_token> on 2024-05-20 13:13:50.909366+00:00
+[2024-05-20T13:13:51.433+0000] {standard_task_runner.py:60} INFO - Started process 4994 to run task
+[2024-05-20T13:13:51.437+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'api_data_attendance_test', 'get_jwt_token', 'manual__2024-05-20T13:13:50.909366+00:00', '--job-id', '850', '--raw', '--subdir', 'DAGS_FOLDER/api_data_attendance.py', '--cfg-path', '/tmp/tmp2fhccr35']
+[2024-05-20T13:13:51.440+0000] {standard_task_runner.py:88} INFO - Job 850: Subtask get_jwt_token
+[2024-05-20T13:13:51.478+0000] {task_command.py:423} INFO - Running <TaskInstance: api_data_attendance_test.get_jwt_token manual__2024-05-20T13:13:50.909366+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-20T13:13:51.524+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='api_data_attendance_test' AIRFLOW_CTX_TASK_ID='get_jwt_token' AIRFLOW_CTX_EXECUTION_DATE='2024-05-20T13:13:50.909366+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-20T13:13:50.909366+00:00'
+[2024-05-20T13:13:51.881+0000] {python.py:201} INFO - Done. Returned value was: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJyb2xlIjoiVXNlciIsInVuaXF1ZV9uYW1lIjoiSU9TU0FQSSIsIlBlcm1pc3Npb24iOlsiQm9va2luZy5WaWV3IiwiQ2xhc3NJbmZvLlZpZXciXSwibmJmIjoxNzE2MjEwODE5LCJleHAiOjE3MTYyMTQ0MTksImlhdCI6MTcxNjIxMDgxOSwiaXNzIjoiRElQIEFQSSIsImF1ZCI6IklDVCxNYWhpZG9sIFVuaXZlcnNpdHkifQ.2t1R9dnPPnhtdmOf27dbfaoyb3Gss5G7qqQ3pEv3iHw
+[2024-05-20T13:13:51.937+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=api_data_attendance_test, task_id=get_jwt_token, execution_date=20240520T131350, start_date=20240520T131351, end_date=20240520T131351
+[2024-05-20T13:13:51.999+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-20T13:13:52.049+0000] {taskinstance.py:3280} INFO - 2 downstream tasks scheduled from follow-on schedule check

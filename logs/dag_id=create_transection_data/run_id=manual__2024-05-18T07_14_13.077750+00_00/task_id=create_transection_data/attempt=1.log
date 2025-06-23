@@ -1,0 +1,61 @@
+[2024-05-18T07:14:18.349+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: create_transection_data.create_transection_data manual__2024-05-18T07:14:13.077750+00:00 [queued]>
+[2024-05-18T07:14:18.355+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: create_transection_data.create_transection_data manual__2024-05-18T07:14:13.077750+00:00 [queued]>
+[2024-05-18T07:14:18.355+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-18T07:14:18.362+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_transection_data> on 2024-05-18 07:14:13.077750+00:00
+[2024-05-18T07:14:18.366+0000] {standard_task_runner.py:60} INFO - Started process 2825 to run task
+[2024-05-18T07:14:18.368+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'create_transection_data', 'create_transection_data', 'manual__2024-05-18T07:14:13.077750+00:00', '--job-id', '441', '--raw', '--subdir', 'DAGS_FOLDER/transection_data.py', '--cfg-path', '/tmp/tmpejy6b3q5']
+[2024-05-18T07:14:18.370+0000] {standard_task_runner.py:88} INFO - Job 441: Subtask create_transection_data
+[2024-05-18T07:14:18.398+0000] {task_command.py:423} INFO - Running <TaskInstance: create_transection_data.create_transection_data manual__2024-05-18T07:14:13.077750+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-18T07:14:18.441+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='create_transection_data' AIRFLOW_CTX_TASK_ID='create_transection_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-18T07:14:13.077750+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-18T07:14:13.077750+00:00'
+[2024-05-18T07:14:18.447+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-18T07:14:18.456+0000] {sql.py:450} INFO - Running statement: 
+            CREATE TABLE IF NOT EXISTS transsection AS
+            SELECT 
+                th.date,
+                th.time,
+                th.temperature,
+                th.humidity,
+                th.heat,
+                td.booking_id,
+                td.activity_id,
+                td.booking_request_date,
+                td.booking_start_date,
+                td.booking_end_date,
+                td.booking_start_time,
+                td.booking_end_time,
+                td.duration_in_minute,
+                td.remarks,
+                td.subject_code,
+                td.requester_name,
+                td.room ,
+                td.floor,
+                td.participants,
+                td.section,
+                td.attendance_id,
+                td.subject_name,
+                td.class_date,
+                td.class_start,
+                td.class_end,
+                td.num_enrolledStd,
+                td.num_present,
+                td.percent_present,
+                td.num_absent,
+                td.percent_absent,
+                td.num_leave,
+                td.percent_leave
+                
+            FROM 
+                temp_and_humi AS th
+            LEFT JOIN 
+                api_data AS td ON 
+                th.date = td.booking_start_date 
+                AND th.time >= td.booking_start_time 
+                AND th.time < td.booking_end_time;
+  
+        , parameters: None
+[2024-05-18T07:14:18.468+0000] {sql.py:459} INFO - Rows affected: 5617
+[2024-05-18T07:14:18.471+0000] {transection_data.py:342} INFO - Successfully created transsection table.
+[2024-05-18T07:14:18.472+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-05-18T07:14:18.478+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=create_transection_data, task_id=create_transection_data, execution_date=20240518T071413, start_date=20240518T071418, end_date=20240518T071418
+[2024-05-18T07:14:18.501+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-18T07:14:18.513+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

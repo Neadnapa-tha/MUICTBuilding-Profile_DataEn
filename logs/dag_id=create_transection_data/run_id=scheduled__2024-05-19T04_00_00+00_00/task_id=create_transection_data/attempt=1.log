@@ -1,0 +1,63 @@
+[2024-05-20T16:01:18.855+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: create_transection_data.create_transection_data scheduled__2024-05-19T04:00:00+00:00 [queued]>
+[2024-05-20T16:01:18.929+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: create_transection_data.create_transection_data scheduled__2024-05-19T04:00:00+00:00 [queued]>
+[2024-05-20T16:01:18.935+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2024-05-20T16:01:18.986+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_transection_data> on 2024-05-19 04:00:00+00:00
+[2024-05-20T16:01:19.007+0000] {standard_task_runner.py:60} INFO - Started process 17648 to run task
+[2024-05-20T16:01:19.016+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'create_transection_data', 'create_transection_data', 'scheduled__2024-05-19T04:00:00+00:00', '--job-id', '987', '--raw', '--subdir', 'DAGS_FOLDER/transection_data.py', '--cfg-path', '/tmp/tmp4fut8v8b']
+[2024-05-20T16:01:19.025+0000] {standard_task_runner.py:88} INFO - Job 987: Subtask create_transection_data
+[2024-05-20T16:01:19.176+0000] {task_command.py:423} INFO - Running <TaskInstance: create_transection_data.create_transection_data scheduled__2024-05-19T04:00:00+00:00 [running]> on host e3e2dc6bc2be
+[2024-05-20T16:01:19.415+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='create_transection_data' AIRFLOW_CTX_TASK_ID='create_transection_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-19T04:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-19T04:00:00+00:00'
+[2024-05-20T16:01:19.445+0000] {base.py:83} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-05-20T16:01:19.504+0000] {sql.py:450} INFO - Running statement: 
+        CREATE TABLE IF NOT EXISTS transsection AS
+        SELECT 
+            th.date,
+            th.time,
+            th.temperature,
+            th.humidity,
+            th.heat,
+            td.booking_id,
+            td.activity_id,
+            td.booking_request_date,
+            td.booking_start_date,
+            td.booking_end_date,
+            td.booking_start_time,
+            td.booking_end_time,
+            td.duration_in_minute,
+            td.booking_remarks,
+            td.subject_code,
+            td.requester_name,
+            td.room,
+            td.floor,
+            td.participant_type_id,
+            td.participant_type,
+            td.amount_exact,
+            td.amount,
+            td.activity_name,
+            td.section,
+            td.subject_name,
+            td.class_date,
+            td.class_start,
+            td.class_end,
+            td.num_enrolledStd,
+            td.num_present,
+            td.percent_present,
+            td.num_absent,
+            td.percent_absent,
+            td.num_leave,
+            td.percent_leave
+        FROM 
+            temp_and_humi AS th
+        LEFT JOIN 
+            api_data AS td ON 
+            th.date = td.booking_start_date 
+            AND CAST(th.time AS time) >= CAST(td.booking_start_time AS time) 
+            AND CAST(th.time AS time) < CAST(td.booking_end_time AS time);
+  
+        , parameters: None
+[2024-05-20T16:01:19.554+0000] {sql.py:459} INFO - Rows affected: 5617
+[2024-05-20T16:01:19.587+0000] {transection_data.py:153} INFO - Successfully created transsection table.
+[2024-05-20T16:01:19.591+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-05-20T16:01:19.625+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=create_transection_data, task_id=create_transection_data, execution_date=20240519T040000, start_date=20240520T160118, end_date=20240520T160119
+[2024-05-20T16:01:19.716+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-20T16:01:19.763+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
